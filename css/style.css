@@ -47,7 +47,7 @@
     background-image: url("css.image/wallpaper01.jpg");
     /* Set a specific height */
     min-height: 860px;
-    min-width: 1500px;
+    min-width: auto;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
