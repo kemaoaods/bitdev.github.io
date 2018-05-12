@@ -46,8 +46,8 @@
     /* The image used */
     background-image: url("css.image/wallpaper01.jpg");
     /* Set a specific height */
-    height: 860px;
-    width: auto;
+    min-height: 860px;
+    min-width: auto;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
@@ -83,4 +83,5 @@
     visibility: visible;
     opacity: 1;
 }
+
                   
