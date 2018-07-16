@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/access.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kanit:100,300" >
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" type="image/x-icon" href="image/mylogo1.ico"/>
@@ -37,16 +38,33 @@
         </div>
     </div>
 
+    <div id="id01" class="modal">
+        <div class="modal-content animate">
+            <h3 align="center"><b>The page is privated by the owner</b></h3>
+            <div style="padding:16px;">
+                <small id="incorrect" style="display:none;color:red;">The password you entered is incorrect.</small>
+                <input id="access" type="password" placeholder="Enter password to access" name="psw" required>
+                <button id="accessBtn" type="submit" onclick="Password()" style="transition:0.3s;">Confirm</button>
+            </div>
+            <div style="background-color:#f1f1f1; padding:16px;">
+                <button type="button" onclick="javascript:location.href='index.html'" class="cancelbtn" style="transition:0.3s;">Back to homepage</button>
+            </div>
+        </div>
+    </div>
+
     <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
         <!-- The Grid -->
         <div class="w3-row-padding w3-margin-top">
-
+            
             <!-- Left Column -->
             <div class="w3-third">
-                <h1><b>PORTFOLIO</b></h1>
+                <h1><b>PORTFOLIO</b><span style="position:relative;bottom:2px;">
+                <a href="portfolio.html" target="_self" class="w3-tag w3-indigo w3-button" style="transition:0.3s;font-size:15px;border-radius: 4px 0px 0px 4px;"><b>TH</b></a>
+                <a href="index.html" target="_self" class="w3-tag w3-light-grey w3-button" style="transition:0.3s;font-size:15px;position:relative; margin-left:-15px;border-radius: 0px 4px 4px 0px;"><b>EN</b></a></span></h1>
+
                 <div class="w3-bar-block">
-                    <a href="#profile" class="w3-bar-item w3-button w3-padding w3-text-indigo"><i class="fa fa-user fa-fw w3-margin-right"></i>ประวัติส่วนตัว</a>
+                    <a href="#profile" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>ประวัติส่วนตัว</a>
                     <a href="#education" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ประวัติการศึกษา</a>
                     <a href="#educationaldisplay" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</a>
                     <a href="#activities" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>กิจกรรมที่เข้าร่วม</a>
@@ -74,12 +92,12 @@
                         <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-indigo"></i>082-1866840</p>
                         <hr>
 
-                        <p class="w3-large"><b><i class="fa fa-cogs fa-fw w3-margin-right w3-text-indigo"></i>ทักษะ</b></p>
-                        <p>ตัดต่อภาพ | Adobe Photoshop, Illustrator</p>
+                        <p class="w3-large"><b><i class="fa fa-cogs fa-fw w3-margin-right w3-text-indigo"></i>ความสามารถ</b></p>
+                        <p>ตัดต่อภาพ | Adobe Photoshop CC, Illustrator CC</p>
                         <div class="w3-white w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:90%">90%</div>
                         </div>
-                        <p>ตัดต่อวิดีโอ | Vegas Pro, Premiere, Final Cut Pro</p>
+                        <p>ตัดต่อวิดีโอ | Vegas Pro 15, Premiere, Final Cut Pro</p>
                         <div class="w3-white w3-round-xlarge w3-small">
                             <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:70%">70%</div>
                         </div>
@@ -122,7 +140,7 @@
             <!-- Right Column -->
             <div id="profile" class="w3-twothird w3-margin-top">
                 <div class="w3-container w3-light-grey w3-margin-bottom w3-row-padding">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ข้อมูลส่วนตัว</b></h2>
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ประวัติส่วนตัว</b></h2>
                     <div class="w3-third">
                         <div class="w3-container w3-indigo w3-margin-bottom w3-padding-16 w3-round">
                             <span style="color:white;">ชื่อ-สกุล: อภิสิทธิ์ ฤทธิ์เรืองโรจน์<br>ชื่อเล่น: เข้ม</span><br>
@@ -131,7 +149,7 @@
                         </div>
                         <div class="w3-container w3-indigo w3-margin-bottom w3-padding-16 w3-round">
                             <span style="color:white;">กำลังศึกษาในระดับชั้น:<br>มัธยมศึกษาปีที่ 6 ปีการศึกษา 2651</span><br>
-                            <span style="color: white;">แผนการเรียน:<br>คณิตศาสตร์-วิทยาศาสตร์</span><br>
+                            <span style="color: white;">แผนการเรียน:<br>วิทยาศาสตร์-คณิตศาสตร์</span><br>
                             <span style="color:white;">โครงการ:<br>พัฒนาและส่งเสริมความสามารถพิเศษทางด้านวิทยาาศาสตร์ คณิตศาสตร์ และเทคโนโลยี ภาคสมทบ</span><br>
                         </div>
                     </div>
@@ -166,10 +184,11 @@
                             <span style="color: white;">
                             - ออกแบบและตัดต่อภาพโดยใช้โปรแกรม Photoshop CC ได้เป็นอย่างดี<br>
                             - ตัดต่อวิดีโอโดยใช้โปรแกรม Vegas Pro 15 และ Final Cut Pro ได้เป็นอย่างดี<br>
-                            - ออกแบบเกมโดยใช้โปรแกรม Unity ร่วมกับภาษา C# ได้<br>
+                            - ออกแบบเกมโดยใช้โปรแกรม Unity ร่วมกับภาษา C#<br>
                             - เขียนภาษา C#, Java ได้<br>
-                            - ออกแบบเว็บไซต์โดยใช้ภาษา html, css, javascript ร่วมกับโปรแกรม Visual Studio ได้<br>
-                            - ออกแบบโมเดล 3 มิติโดยใช้โปรแกรม Blender ได้</span>
+                            - ออกแบบเว็บไซต์โดยใช้ภาษา html, css, javascript ร่วมกับโปรแกรม Visual Studio<br>
+                            - ออกแบบโมเดล 3 มิติโดยใช้โปรแกรม Blender<br>
+                            - เล่นบาสเกตบอลและแบดมินตัน</span>
                             <h5 style="color: white;"><i class="fa fa-lightbulb-o fa-fw"></i><b style="margin-left:4px">ความสนใจ</b></h5>
                             <span style="color:white;">
                             - สนใจการออกแบบและฮาร์ดแวร์โน๊ตบุ๊ค<br>
@@ -181,7 +200,45 @@
                 </div>
 
                 <div class="w3-container w3-light-grey w3-margin-bottom">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Work Experience</h2>
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ประวัติการศึกษา</b></h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>ระดับชั้นอนุบาล</b></h5>
+                        <h6 class="w3-text-indigo"><span>โรงเรียนอนุบาลขวัญดรุณ</span><i class="fa fa-calendar fa-fw w3-margin-left"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">Current</span><br>
+                        <font size="1px">ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290</font></h6>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>ระดับชั้นประถมศึกษา</b></h5>
+                        <h6 class="w3-text-indigo"><span>โรงเรียนพงษ์พิกุลเชียงใหม่</span><i class="fa fa-calendar fa-fw w3-margin-left"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">Current</span><br>
+                        <font size="1px">216 ซอยฟ้ามุ่ย ถนนสันทราย-พร้าว ต.สันทรายหลวง อ.สันทราย จ.เชียงใหม่ 50210</font></h6>
+                        <p>เกรดเฉลี่ย: </p>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>ระดับชั้นมัธยมศึกษาตอนต้น</b></h5>
+                        <h6 class="w3-text-indigo"><span>โรงเรียนเทพบดินทร์วิทยาเชียงใหม่</span><i class="fa fa-calendar fa-fw w3-margin-left"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">Current</span><br>
+                        <font size="1px">6/1 ถนนสนามกีฬา ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
+                        <p>เกรดเฉลี่ย: </p><br>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>ระดับชั้นมัธยมศึกษาตอนปลาย (แผนการเรียน วิทยาศาสตร์-คณิตศาสตร์)</b></h5>
+                        <h6 class="w3-text-indigo"><span>โรงเรียนยุพราชวิทยาลัย</span><i class="fa fa-calendar fa-fw w3-margin-left"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">Current</span><br>
+                        <font size="1px">238 ถนนพระปกเกล้า ต.ศรีภูมิ อ.เมือง เชียงใหม่ 50200</font></h6>
+                        <p>เกรดเฉลี่ย: </p><br>
+                    </div>
+                </div>
+
+                <div id="educationaldisplay" class="w3-container w3-light-grey w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-file-text fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ระเบียนแสดงผลการศึกษา</b></h2>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
+                        <p>ระเบียนแสดงผลการศึกษา ปพ.๑</p>
+                        <p>ใบรับรองผลการศึกษา ปพ.๗</p>
+                    </div>
+                </div>
+
+                <div id="education" class="w3-container w3-light-grey w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ระเบียนแสดงผลการศึกษา</b></h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">Current</span></h6>
@@ -201,7 +258,7 @@
                     </div>
                 </div>
 
-                <div id="education" class="w3-container w3-light-grey w3-margin-bottom">
+                <div id="" class="w3-container w3-light-grey w3-margin-bottom">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i>Education</h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
@@ -230,10 +287,10 @@
 
     <!-- Static Bottom -->
     <div id="navbar">
-        <a class="text" href="https://kemaoaods.github.io/main/"><img src="image/mylogo1.ico" style="max-width:23px;" /></a>
-        <a class="text" href="index.html" target="_self">Home</a>
-        <a class="text" href="portfolio.html">Portfolio</a>
-        <a class="text" href="project.html" target="_self">Project</a>
+        <a class="text" href="https://kemaoaods.github.io/main/"><img src="image/mylogo1.ico" style="max-width:23px;"/></a>
+        <a class="text" href="index.html" target="_self"><b>Home</b></a>
+        <a class="text" href="portfolio.html"><b>Portfolio</b></a>
+        <a class="text" href="project.html" target="_self"><b>Project</b></a>
 
         <a class="ico" href="https://www.facebook.com/aps.khem" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
     </div>
@@ -245,15 +302,16 @@
             <a href="https://steamcommunity.com/profiles/76561198126589193/" target="_blank"><i class="fa fa-steam w3-hover-opacity"></i></a>
             <a href="https://www.youtube.com/CyberRecordChannel" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
             <a href="http://line.me/ti/p/~khemzakung" target="_blank"><img src="image/line-512.png" style="width:15px" class="w3-hover-opacity" /></a>
-            <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><img src="image/googleplus-512.png" style="width: 15px" class="w3-hover-opacity" /></a>
+            <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><i class="fa fa-google-plus w3-hover-opacity"></i></a>
             <div class="tooltip">
-                <img src="image/gmail-512.png" style="width: 15px" class="w3-hover-opacity" />
+                <img src="image/gmail-512.png" style="width: 15px" class="fa fa-envelope-o w3-hover-opacity" />
                 <span class="tooltiptext">cyber1.record@gmail.com<br>apisit_lon@hotmail.com</span>
             </div>
         </div>
-        <a href="index.html" target="_self">HOME</a> | <a href="portfolio.html" target="_self">PORTFOIO</a> | <a href="project.html" target="_self">PROJECT</a><br>&copy 2018 www.bitdeveloper.com All Rights Reserved.
+        <a href="index.html" target="_self">HOME</a> | <a href="portfolio.html" target="_self">PORTFOIO</a> | <a href="project.html" target="_self">PROJECT</a><br>&copy 2018 kemaoaods.github.io All Rights Reserved.
     </div>
 
     <script src="js/homemain.js"></script>
+    <script src="js/access.js"></script>
 </body>
 </html>

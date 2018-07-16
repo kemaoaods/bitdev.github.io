@@ -5,8 +5,6 @@ var d = 15; //(optional, default 50) : time between character changes in ms
 var e = true; //(optional): a callback function called when a character is changed (useful for animations)
 AnimatedText(a, b, c, d, e);
 
-
-
 function AnimatedText(target, texts, changeInterval, updateInterval, onTextChanged) {
     var currentText = parseInt(Math.random() * texts.length);
     var areaText = texts[0];
@@ -30,17 +28,6 @@ function AnimatedText(target, texts, changeInterval, updateInterval, onTextChang
         stop: function() { clearInterval(this.t1); clearInterval(this.t2); 
     }
 };
-    
-/*var myIndex1 = 0;
-autotext();
-function autotext() {
-            var role = ["DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","CODER"]
-            myIndex1++;
-            if (myIndex1 > role.length) {myIndex1 = 1}
-            document.getElementById("role").innerHTML = role[myIndex1-1];
-            setTimeout(autotext, 2000);
-
-}*/
 
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
