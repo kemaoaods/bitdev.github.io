@@ -1,0 +1,37 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "html", "html", "{46201BCD-56B2-445F-8909-5BCC57FFC16E}"
+	ProjectSection(SolutionItems) = preProject
+		index.html = index.html
+		portfolio.html = portfolio.html
+		project.html = project.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{E736499D-EC9E-4A39-AE7C-BB36BB5309B9}"
+	ProjectSection(SolutionItems) = preProject
+		css\style.css = css\style.css
+		css\access.css = css\access.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "js", "js", "{891732AA-392B-4C73-B10C-3E762FEB45F1}"
+	ProjectSection(SolutionItems) = preProject
+		js\homemain.js = js\homemain.js
+		js\access.js = js\access.js
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "projects", "projects", "{7BD912CE-6529-4038-928E-AABC70285EE8}"
+	ProjectSection(SolutionItems) = preProject
+		project\project0.html = project\project0.html
+		project\project1.html = project\project1.html
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BD912CE-6529-4038-928E-AABC70285EE8} = {46201BCD-56B2-445F-8909-5BCC57FFC16E}
+	EndGlobalSection
+EndGlobal

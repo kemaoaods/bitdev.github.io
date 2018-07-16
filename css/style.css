@@ -47,7 +47,7 @@ a {
 }
 
 .parallax { /* use with upper wallpaper */
-    background-image: url("css.image/wallpaper01.jpg");
+    background-image: url("../image/wallpaper01.jpg");
     /* Set a specific height */
     height: 850px;
     width: auto;
@@ -139,6 +139,7 @@ a {
     }
 }
 
+
 .social {
     -ms-flex: 20%; /* IE10 */
     flex: 20%;
@@ -147,4 +148,18 @@ a {
     margin-top: 8px;
     vertical-align: middle;
 }
-                  
+
+/* Search Bar */
+input[type=text] {
+    width: 300px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 40px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('../image/searchicon.png');
+    background-size: 28px 28px;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 45px;
+}
