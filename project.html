@@ -39,20 +39,25 @@
 
     <!-- Page content -->
     <div class="w3-padding-large w3-margin-top">
-        <div class="w3-content w3-light-grey w3-padding-large w3-padding-16 w3-margin-top">
-            <div class="w3-container w3-padding">
-                <h4><b>Projects and Researches</b><i class="fa fa-sort-alpha-desc w3-hover-opacity w3-padding w3-round w3-tag w3-grey" style="transition:0.3s;margin-left:4px;cursor:pointer;"></i>
-                <input type="text" placeholder="Search..." id="search" onkeyup="filterFunction()"></h4>
+        <div id="document" class="w3-content w3-light-grey w3-padding-large w3-padding-16 w3-margin-top">
+            <h4>
+                <b>Projects and documents</b>
+                <input type="text" placeholder="Search document..." id="search" onkeyup="Searching()" class="w3-hide-small w3-hide-medium">
+            </h4>
+
+            <h2 id="emptyresult" align="center" style="margin:54px;display:none"><b>No result to show</b></h2>
+
+            <div class="w3-container w3-white w3-padding-16">
+                <a href="project/project0.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
+                <h6><b>วิชาหน้าที่ผลเมือง proj01</b><span class="w3-tag w3-round w3-indigo" style="margin-left:6px">1 May 2018</span></h6>
+                <span class="w3-text-grey">Description: </span>
+                <span class="w3-text-grey">เพจความรู้เรื่องเรือนกาแล</span>
             </div>
             <div class="w3-container w3-white w3-padding-16">
-                <a href="project/project0.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:100px;transition:0.3s;"></a>
-                <h5>วิชาหน้าที่ผลเมือง: proj01, <span class="w3-small">1 พฤษภาคม 2018</span></h5>
-                <span class="w3-opacity">ความรู้เรื่องเรือนกาแล</span>
-            </div>
-            <div class="w3-container w3-white w3-padding-16">
-                <a href="project/project1.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:100px;transition:0.3s;"></a>
-                <h5>วิชาหน้าที่ผลเมือง: proj02, <span class="w3-small">3 พฤษภาคม 2018</span></h5>
-                <span class="w3-opacity">ความรู้เรืองขนมเทียน</span>
+                <a href="project/project1.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
+                <h6><b>วิชาหน้าที่ผลเมือง proj02</b><span class="w3-tag w3-round w3-indigo" style="margin-left: 6px">3 May 2018</span></h6>
+                <span class="w3-text-grey">Description: </span>
+                <span class="w3-text-grey">เพจความรู้เรืองขนมเทียน</span>
             </div>
         </div>
     </div>

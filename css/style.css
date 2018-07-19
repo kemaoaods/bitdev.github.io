@@ -151,7 +151,7 @@ a {
 
 /* Search Bar */
 input[type=text] {
-    width: 300px;
+    width: 210px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 40px;
@@ -162,4 +162,10 @@ input[type=text] {
     background-position: 10px 10px;
     background-repeat: no-repeat;
     padding: 12px 20px 12px 45px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 72%;
 }
