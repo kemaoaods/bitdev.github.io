@@ -65,3 +65,9 @@ function EmptyResult(i) {
         document.getElementById("emptyresult").style.display = "none";
     }
 }
+
+window.scroll({
+  top: 0, //use when scroll up''
+  left: 0, 
+  behavior: 'smooth' 
+});

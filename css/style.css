@@ -28,6 +28,20 @@ a {
     text-decoration: none;
     font-size: 17px;
     transition: 0.3s;
+    border-bottom-color: #4054b2;
+}
+
+#navbar .textmark {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #4054b2;
 }
 
 #navbar .ico {
@@ -41,9 +55,10 @@ a {
     transition: 0.3s;
 }
 
-#navbar a:hover {
-    background-color: #ddd;
-    color: black;
+#navbar .text:hover {
+    color: #BEBEBE;
+    padding-bottom: 10px;
+    border-bottom: 5px solid #4054b2;
 }
 
 .parallax { /* use with upper wallpaper */
