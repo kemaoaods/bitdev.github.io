@@ -199,3 +199,7 @@ input[type=text]:focus {
     height: 100%;
 }
 
+input:focus, button:focus {
+    outline: none;
+}
+
