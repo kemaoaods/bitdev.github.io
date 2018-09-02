@@ -21,7 +21,7 @@ function AnimatedText(target, texts, changeInterval, updateInterval, onTextChang
     }.bind(this), updateInterval ? updateInterval : 50);
     this.t2 = setInterval(function() {
         currentText = parseInt(Math.random() * texts.length);
-    }.bind(this), changeInterval ? changeInterval : 4000);
+        }.bind(this), changeInterval ? changeInterval : 4000);
     }
     AnimatedText.prototype = {
         constructor: AnimatedText,
@@ -66,8 +66,29 @@ function EmptyResult(i) {
     }
 }
 
+window.onload = function sharedLayout() {
+    for (var i = 0; i < document.getElementsByTagName("div").length; i++) {
+        var elmnt = document.getElementsByTagName("div")[i];
+        var file = elmnt.getAttribute("layout");
+        if (file) {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    elmnt.removeAttribute("layout");
+                    sharedLayout();
+                }
+            }      
+            xhttp.open("GET", file, true);
+            xhttp.send();
+            return;
+        }
+    }
+};
+
 window.scroll({
-  top: 0, //use when scroll up''
-  left: 0, 
-  behavior: 'smooth' 
+    top: 0, //use when scroll up''
+    left: 0, 
+    behavior: 'smooth' 
 });
