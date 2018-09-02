@@ -63,10 +63,8 @@ a {
 
 .parallax { /* use with upper wallpaper */
     background-image: url("../image/wallpaper01.jpg");
-    /* Set a specific height */
     height: 850px;
     width: auto;
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -87,7 +85,6 @@ a {
     border-radius: 6px;
     padding: 5px 0;
     opacity: 0;
-    /* Position the tooltip */
     position: absolute;
     z-index: 1;
     bottom: 100%;
@@ -112,7 +109,22 @@ a {
 
 .showcase {
     width: 100%;
+    border-radius: 6px;
     transition: 0.3s;
+}
+
+.showcase:hover {
+    box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.2);
+    opacity: 0.8;
+}
+
+.headlink {
+    color: #4054b2;
+    transition: 0.3s;
+}
+
+.headlink:hover {
+    opacity: 0.8;
 }
 
 .row {
@@ -162,6 +174,11 @@ a {
     padding: 0 4px;
     margin-top: 8px;
     vertical-align: middle;
+    transition: 0.3s;
+}
+
+.social:hover {
+    opacity: 0.8;
 }
 
 /* Search Bar */
