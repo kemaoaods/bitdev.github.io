@@ -1,5 +1,5 @@
 ﻿var a = document.getElementById("role");
-var b = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER"];
+var b = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
 var c = 4000; //(optional, default 4000): time between string changes in ms
 var d = 15; //(optional, default 50) : time between character changes in ms
 var e = true; //(optional): a callback function called when a character is changed (useful for animations)
@@ -63,6 +63,24 @@ function EmptyResult(i) {
     }
     else {
         document.getElementById("emptyresult").style.display = "none";
+    }
+}
+
+var focusablephoto = document.getElementsByClassName("photoplace");
+for (var i = 0; i < focusablephoto.length; i++) {
+    for (var j = 0; j < focusablephoto[i].getElementsByTagName("img").length; j++) {
+            focusablephoto[i].getElementsByTagName("img")[j].addEventListener("click", function(){
+            document.getElementById("focusimg").src = this.src;
+            document.getElementById("photomodal").style.display = "block";
+            //document.getElementById("caption").innerHTML = element.alt;
+        });
+    }
+}
+
+//close photomodal element id
+window.onclick = function(event) {
+    if (event.target == photomodal) {
+        photomodal.style.display = "none";
     }
 }
 
