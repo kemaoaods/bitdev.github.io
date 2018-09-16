@@ -29,6 +29,7 @@ function AnimatedText(target, texts, changeInterval, updateInterval, onTextChang
     }
 };
 
+var sidenav = document.getElementById("sidenav");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
@@ -38,6 +39,44 @@ window.onscroll = function() {
         document.getElementById("navbar").style.top = "-60px";
     }
     prevScrollpos = currentScrollPos;
+
+    if (document.documentElement.scrollTop > document.getElementById('profile').offsetTop - 2) {
+        sidenav.style.right = "0";
+        if (document.documentElement.scrollTop >= document.getElementById('workexperience').offsetTop) {
+            select(6);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('awards').offsetTop) {
+            select(5);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('works').offsetTop) {
+            select(4);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('activities').offsetTop) {
+            select(3);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('educationaldisplay').offsetTop) {
+            select(2);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('education').offsetTop) {
+            select(1);
+        }
+        else if (document.documentElement.scrollTop >= document.getElementById('profile').offsetTop) {
+            select(0);
+        }
+    }
+    else {
+        sidenav.style.right = "-40px";
+    }
+
+    function select(index) {
+        for (var i = 0; i < sidenav.childElementCount; i++) {
+            sidenav.children[i].style.backgroundColor = "#333";
+            sidenav.children[i].style.color = "white";
+        }
+        sidenav.children[index].style.backgroundColor = "white";
+        sidenav.children[index].style.color = "black";
+        document.getElementById("navbar").style.top = "-60px";
+    }
 }
 
 function Searching() {
@@ -82,6 +121,14 @@ window.onclick = function(event) {
     if (event.target == photomodal) {
         photomodal.style.display = "none";
     }
+}
+
+function Highlight(elementid) {
+    window.scroll({
+        top: document.getElementById(elementid).offsetTop, //use when scroll up''
+        left: 0, 
+        behavior: 'smooth'
+    });
 }
 
 window.onload = function sharedLayout() {

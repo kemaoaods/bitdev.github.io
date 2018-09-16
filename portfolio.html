@@ -43,6 +43,7 @@
         </div>
     </div>
 
+    <!-- Photo Modal zoom photo showcase -->
     <div id="photomodal" class="w3-center" onclick="close(this)" style="display:none;">
         <img id="focusimg" class="animate" src=""/>
     </div>
@@ -60,13 +61,13 @@
                 </h1>
 
                 <div class="w3-bar-block">
-                    <a href="#profile" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw w3-margin-right"></i>ประวัติส่วนตัว</a>
-                    <a href="#education" class="w3-bar-item w3-button w3-padding"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>ประวัติการศึกษา</a>
-                    <a href="#educationaldisplay" class="w3-bar-item w3-button w3-padding"><i class="fa fa-file-text fa-fw w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</a>
-                    <a href="#activities" class="w3-bar-item w3-button w3-padding"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>กิจกรรมที่เข้าร่วม</a>
-                    <a href="#works" class="w3-bar-item w3-button w3-padding"><i class="fa fa-puzzle-piece fa-fw w3-margin-right"></i>ผลงาน</a>
-                    <a href="#awards" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw w3-margin-right"></i>รางวัลและเกีตรติบัตร</a>
-                    <a href="#workexperience" class="w3-bar-item w3-button w3-padding"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>ประสบการณ์การทำงาน</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('profile')"><i class="fa fa-address-card fa-fw w3-margin-right"></i>ประวัติส่วนตัว</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('education')"><i class="fa fa-graduation-cap fa-fw w3-margin-right"></i>ประวัติการศึกษา</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('educationaldisplay')"><i class="fa fa-file-text fa-fw w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('activities')"><i class="fa fa-gamepad fa-fw w3-margin-right"></i>กิจกรรมที่เข้าร่วม</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('works')"><i class="fa fa-puzzle-piece fa-fw w3-margin-right"></i>ผลงาน</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('awards')"><i class="fa fa-trophy fa-fw w3-margin-right"></i>รางวัลและเกียรติบัตร</a>
+                    <a class="w3-bar-item w3-button w3-padding" onclick="Highlight('workexperience')"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>ประสบการณ์การทำงาน</a>
                 </div>
                 <div class="w3-panel w3-large">
                     <a href="https://www.facebook.com/aps.khem" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
@@ -74,6 +75,9 @@
                     <a href="https://www.pinterest.com/apisit_lon/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
                     <a href="https://steamcommunity.com/profiles/76561198126589193/" target="_blank"><i class="fa fa-steam w3-hover-opacity"></i></a>
                     <a href="https://www.youtube.com/CyberRecordChannel" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
+                    <a href="http://line.me/ti/p/~khemzakung" target="_blank"><i class="fa fa-comment w3-hover-opacity"></i></a>
+                    <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><i class="fa fa-google-plus w3-hover-opacity"></i></a>
+                    <div class="tooltip"><i class="fa fa-envelope w3-hover-opacity"></i><span class="tooltiptext">cyber1.record@gmail.com<br>apisit_lon@hotmail.com</span></div>
                 </div>
                 <div class="w3-light-grey w3-text-grey w3-margin-top">
                     <div class="w3-container">
@@ -183,7 +187,7 @@
                         <span style="color: black;">จำนวนพี่น้อง: 0 (เป็นลูกคนเดียว)</span><br>
                     </div>
                     <div class="w3-twothird w3-margin-bottom">
-                        <h5 class="w3-opacity"><i class="fa fa-home fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">ที่อยู่อาศัย</b></h5>
+                        <h5 class="w3-opacity"><i class="fa fa-home fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">ที่อยู่อาศัย (ตามทะเบียนบ้าน, ปัจจุบัน)</b></h5>
                         <span style="color: black;">331 หมู่ 6 ต.ป่าไผ่ อ.สันทราย จ.เชียงใหม่ 50210</span><br>
                     </div>
                     <div class="w3-twothird w3-margin-bottom">
@@ -206,7 +210,7 @@
                                 • ออกแบบและตัดต่อภาพโดยใช้โปรแกรม Photoshop CC ได้เป็นอย่างดี<br>
                                 • ตัดต่อวิดีโอโดยใช้โปรแกรม Vegas Pro 15 และ Final Cut Pro ได้เป็นอย่างดี<br>
                                 • ออกแบบเกมโดยใช้โปรแกรม Unity ร่วมกับการเขียนภาษา C#<br>
-                                • เขียนภาษา C#, Java ได้<br>
+                                • เขียนภาษา C#, Java<br>
                                 • ออกแบบเว็บไซต์โดยใช้ภาษา HTML5, CSS, JavaScript ร่วมกับโปรแกรม Visual Studio<br>
                                 • ออกแบบโมเดล 3 มิติโดยใช้โปรแกรม Blender<br>
                                 • เล่นบาสเกตบอลและแบดมินตัน
@@ -223,38 +227,46 @@
                 </div>
 
                 <!-- Education -->
-                <div id="education" class="w3-container w3-light-grey w3-margin-bottom" style="padding-bottom:16px">
+                <div id="education" class="w3-container w3-light-grey w3-margin-bottom photoplace" style="padding-bottom:16px">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ประวัติการศึกษา</b></h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระดับชั้นอนุบาล</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนอนุบาลขวัญดรุณ <font size="1px">ต.หนองหาร อ.สันทราย จ.เชียงใหม่ 50290</font></h6>
-                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>20-21 มกราคม 2561</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>พฤษาภาคม 2547 - มีนาคม 2550</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/a_primary2.jpeg"/>
+                            <img src="image/certification/a_primary1.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระดับชั้นประถมศึกษา</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนพงษ์พิกุลเชียงใหม่ <font size="1px">216 ซอยฟ้ามุ่ย ถนนสันทราย-พร้าว ต.สันทรายหลวง อ.สันทราย จ.เชียงใหม่ 50210</font></h6>
-                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>20-21 มกราคม 2561</h6>
-                        <p>เกรดเฉลี่ย: </p>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>พฤษาภาคม 2550 - มีนาคม 2556</h6>
+                        <p>เกรดเฉลี่ย 12 ภาคศึกษา: 3.57</p>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระดับชั้นมัธยมศึกษาตอนต้น</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนเทพบดินทร์วิทยาเชียงใหม่ <font size="1px">6/1 ถนนสนามกีฬา ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
-                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>20-21 มกราคม 2561</h6>
-                        <p>เกรดเฉลี่ย: </p>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>20 พฤษาภาคม 2556 - 25 มีนาคม 2559</h6>
+                        <p>เกรดเฉลี่ย 6 ภาคศึกษา: 3.47</p>
+                        <div class="w3-center">
+                            <img src="image/certification/a_grade7th.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระดับชั้นมัธยมศึกษาตอนปลาย (แผนการเรียน วิทยาศาสตร์-คณิตศาสตร์)</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนยุพราชวิทยาลัย <font size="1px">238 ถนนพระปกเกล้า ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
-                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-indigo w3-round">ปัจจุบัน</span></h6>
-                        <p>เกรดเฉลี่ย: </p>
+                        <h6 class="w3-text-indigo"><i class="fa fa-wpexplorer fa-fw w3-margin-right"></i>โครงการพัฒนาและส่งเสริมความสามารถพิเศษทางด้านวิทยาศาสตร์ คณิตศาสตร์ และเทคโนโลยี ภาคสมทบ</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>10 พฤษาภาคม 2559 - <span class="w3-tag w3-indigo w3-round">ปัจจุบัน</span></h6>
+                        <p>เกรดเฉลี่ย 6 ภาคศึกษา: </p>
                     </div>
                 </div>
 
                 <!-- Educational Display -->
-                <div id="educationaldisplay" class="w3-container w3-light-grey w3-margin-bottom" style="padding-bottom:16px">
+                <div id="educationaldisplay" class="w3-container w3-light-grey w3-margin-bottom photoplace" style="padding-bottom:16px">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-file-text fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ระเบียนแสดงผลการศึกษา</b></h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระเบียนแสดงผลการศึกษา ปพ.๑</b></h5>
@@ -263,16 +275,19 @@
                 </div>
 
                 <!-- Activities -->
-                <div id="activities" class="w3-container w3-light-grey w3-margin-bottom" style="padding-bottom:16px">
+                <div id="activities" class="w3-container w3-light-grey w3-margin-bottom photoplace" style="padding-bottom:16px">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-gamepad fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>กิจกรรมที่เข้าร่วม</b></h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ค่ายจุดประกายความคิดทางวิทยาศาสตร์ สิ่งแวดล้อม และสะเต็มศึกษา</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>อุทยานแห่งชาติแจ้ซ้อน จังหวัดลำปาง</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>20-21 มกราคม 2561</h6>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <div class="w3-center">
+                            <img src="image/certification/join_YPC_jeason.jpeg"/>
+                        </div>
                         <hr>
                     </div>
-                    <div class="w3-container photoplace">
+                    <div class="w3-container">
                         <h5 class="w3-opacity"><b>โครงการค่ายยุวชนคอมพิวเตอร์ครั้งที่ 16 ComCamp16th</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิทยาศาสตร์ ภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>24-27 มกราคม 2561</h6>
@@ -289,6 +304,18 @@
                             <img src="image/comcamp16th/DSC03103.jpg"/>
                             <img src="image/comcamp16th/DSC03145.jpg"/>
                         </div>
+                        <div class="w3-center">
+                            <img src="image/certification/ComCamp16th_join.jpeg"/>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>การทดสอบกำลังใจกระโดดหอสูง 34 ฟุต</b></h5>
+                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>ศูนย์ฝึกนักศึกษาวิชาทหาร มณฑลทหารบกที่ 33</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>21 มีนาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/a_recruit.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -296,40 +323,48 @@
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>21-29 พฤษาภาคม 2561</h6>
                         <p>ได้เข้ารับการอบรมการเขียนโปรแกรมคำสั่งประยุกต์ใช้กับ Arduino เพื่อใช้ในการสร้างหุ่นยนต์ Arduino ที่ต้องนำมาบังคับเพื่อแก้โจทย์และอุปสรรคในการแข่งขัน</p>
+                        <div class="w3-center">
+                            <img src="image/certification/join_DIY.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>โครงการมหกรรมคว้าเกียร์สัญจรโดย ALPHA En</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงแรมเชียงใหม่ภูคำ จังหวัดเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>12 สิงหาคม 2561</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <div class="w3-center">
+                            <img src="image/certification/join_AlphaEn.jpeg"/>
+                        </div>
                     </div>
                     <hr>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>โครงการการแข่งขัน iCode 2018</b></h5>
+                        <h5 class="w3-opacity"><b>การแข่งขัน iCode 2018</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>19 สิงหาคม 2561</h6>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                        <div class="w3-center">
+                            <img src="image/certification/join_iCode.jpeg"/>
+                        </div>
                     </div>
                     <hr>
-                    <div class="w3-container photoplace">
+                    <div class="w3-container">
                         <h5 class="w3-opacity"><b>การศึกษาภาษาคอมพิวเตอร์ด้วยตัวเองจากโปรแกรม SoloLearn</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>มกราคม 2559 - <span class="w3-tag w3-indigo w3-round">ปัจจุบัน</span></h6>
+                        <p>ได้เรียนรู้ภาษา C#, Java, HTML, CSS, JavaScript และ jQuery เพื่อนำมาต่อยอดและพัฒนาในด้านคอมพิวเตอร์ต่อไป</p>
                         <div class="w3-center">
                             <img src="image/sololearn/CSharp_certificate.jpg"/>
                             <img src="image/sololearn/HTML_certificate.jpg"/>
                             <img src="image/sololearn/CSS_certificate.jpg"/>
                             <img src="image/sololearn/JavaScript_certificate.jpg"/>
                             <img src="image/sololearn/Java_certificate.jpg"/>
+                            <img src="image/sololearn/jQuery_certificate.jpg"/>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
                     </div>
                 </div>
 
                 <!-- Works -->
-                <div id="works" class="w3-container w3-light-grey w3-margin-bottom" style="padding-bottom:16px">
+                <div id="works" class="w3-container w3-light-grey w3-margin-bottom photoplace" style="padding-bottom:16px">
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-puzzle-piece fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>ผลงาน</b></h2>
-                    <div class="w3-container photoplace">
+                    <div class="w3-container">
                         <h5 class="w3-opacity"><b>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ Synonym Ball</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-wrench fa-fw w3-margin-right"></i>นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์, นายการิน บุญยืน</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-trophy fa-fw w3-margin-right"></i>รางวัลระดับเหรียญเงินการประกวดโครงงานดีเด่นสะเต็มศึกษารอบคัดเลือก ระดับมัธยมศึกษาตอนปลาย,</h6>
@@ -342,6 +377,12 @@
                         </div>
                         <p>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ Synonym Ball เป็นเกมเพื่อการศึกษาและให้ความเพลิดเพลิน สามารถเล่นได้ฟรีในเว็บไซต์ BitDeveloper ออกแบบและสร้างโดยนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ ร่วมกับนายการิน บุญยืน โดยใช้โปรแกรม Unity3d เป็นเครื่องมือในการออกแบบเกม</p>
                         <a href="https://kemaoaods.github.io/main/project/project2.html"><u>สามารถรับชมผลงานได้ที่นี้</u></a>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>การตัดต่อวิดีโอ</b></h5>
+                        <h6 class="w3-text-indigo"><i class="fa fa-wrench fa-fw w3-margin-right"></i>นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2018</h6>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -365,36 +406,51 @@
                 </div>
 
                 <!-- Awards -->
-                <div id="awards" class="w3-container w3-light-grey w3-margin-bottom" style="padding-bottom:16px">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>รางวัลและเกีตรติบัตร</b></h2>
+                <div id="awards" class="w3-container w3-light-grey w3-margin-bottom photoplace" style="padding-bottom:16px">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-trophy fa-fw w3-margin-right w3-xxlarge w3-text-indigo"></i><b>รางวัลและเกียรติบัตร</b></h2>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลรองชนะเลิศอันดับ 2 การแข่งขันประดิษฐ์(หุ่นยนต์) DIY Robot Project ครั้งที่ 1</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>29 พฤษาภาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/DIY_3rdplace.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลระดับเหรียญเงินการประกวดโครงงานดีเด่นสะเต็มศึกษารอบคัดเลือก ระดับมัธยมศึกษาตอนปลาย</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>ศูนย์สะเต็มศึกษาภาคเหนือตอนบน โรงเรียนยุพราชวิทยาลัย</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>9 กรกฎาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/STEM2561_silver.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลรองชนะเลิศอันดับ 2 การแข่งขันประกวดโครงงาน สาขาคอมพิวเตอร์</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนยุพราชวิทยาลัย</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7 สิงหาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/ProjectYRC_award.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลชนะเลิศการแข่งขันเขียนโปรแกรม Computer Programming Contest</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7 สิงหาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/ComContest_1st.jpg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลชมเชยการแข่งขันเขียนโปรแกรม iCode 2018</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>19 สิงหาคม 2561</h6>
+                        <div class="w3-center">
+                            <img src="image/certification/iCode_award.jpeg"/>
+                        </div>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -419,6 +475,16 @@
             <!-- End Grid -->
         </div>
         <!-- End Page Container -->
+    </div>
+
+    <div id="sidenav" class="w3-display-right">
+        <div onclick="Highlight('profile')"><i class="fa fa-address-card w3-margin-right"></i>ประวัติส่วนตัว</div>
+        <div onclick="Highlight('education')"><i class="fa fa-graduation-cap w3-margin-right"></i>ประวัติการศึกษา</div>
+        <div onclick="Highlight('educationaldisplay')"><i class="fa fa-file-text w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</div>
+        <div onclick="Highlight('activities')"><i class="fa fa-gamepad w3-margin-right"></i>กิจกรรมที่เข้าร่วม</div>
+        <div onclick="Highlight('works')"><i class="fa fa-puzzle-piece w3-margin-right"></i>ผลงาน</div>
+        <div onclick="Highlight('awards')"><i class="fa fa-trophy w3-margin-right"></i>รางวัลและเกียรติบัตร</div>
+        <div onclick="Highlight('workexperience')"><i class="fa fa-briefcase w3-margin-right"></i>ประสบการณ์การทำงาน</div>
     </div>
 
     <div id="navbar">

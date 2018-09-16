@@ -68,8 +68,31 @@ hr {
     background-size: cover;
 }
 
+#sidenav {
+    position: fixed;
+    right: -40px;
+    top: 40%;
+    max-width: 210px;
+    height: auto; /* Full height */
+    transition: 0.3s;
+}
+
+#sidenav div {
+    color: white;
+    background-color:#333;
+    width: 100%;
+    padding: 8px;
+    margin-left: 175px;
+    transition: 0.3s;
+}
+
+#sidenav div:hover {
+    cursor: pointer;
+    margin-left: 0px;
+}
+
 .photoplace img {
-    max-width:19.25%;
+    max-width:19%;
     width:auto;
     border-radius: 4px;
     margin-bottom: 4px;
