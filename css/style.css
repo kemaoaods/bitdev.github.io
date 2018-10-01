@@ -101,6 +101,18 @@ hr {
     cursor: pointer;
 }
 
+.flipbookbtn {
+    border-radius: 4px;
+    width:25px;
+    height:45px;
+    transition: 0.3s;
+}
+
+.flipbookbtn:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+}
+
 #photomodal {
     display: block; /* Popup by default */
     position: fixed; /* Stay in place */

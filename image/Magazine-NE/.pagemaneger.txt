@@ -1,0 +1,20 @@
+p8 art
+p9
+p10
+p11
+
+<head>
+ <body>
+  <title>
+   text"descript-1 in major_des" = <font>Gagriola"20"
+   text"descript-1 in major_head" = <font>Gagriola"36"
+
+text"descript-1 in major_des" = <font>Engravers MT"72"
+text"descript-1 in major_des" = <font>Engravers MT"30"
+
+text"trip-1 diduno" = <font>Sanamdeklen"24"
+text"trip-1 diduno" = <font>Berlin Sans FT"12.5"
+text"trip-1 diduno" = <font>Copperplate"28"
+  </title>
+ </body>
+</head>

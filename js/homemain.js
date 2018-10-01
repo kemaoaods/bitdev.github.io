@@ -152,6 +152,14 @@ window.onload = function sharedLayout() {
     }
 };
 
+function flipbook(flip) {
+    var flipbook = document.getElementById("flipbook");
+    var flipbookpage = document.getElementById("flipbookpage");
+    if ((flipbookpage.innerHTML == 1 && flip == -1)||(flipbookpage.innerHTML == 12 && flip == 1)) flip = 0;
+    flipbook.src = "image/Magazine-NE/p" + (Number(flipbookpage.innerHTML) + flip) + ".jpg";
+    flipbookpage.innerHTML = Number(flipbookpage.innerHTML) + flip;
+}
+
 window.scroll({
     top: 0, //use when scroll up''
     left: 0, 
