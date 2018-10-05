@@ -30,14 +30,13 @@
 
     <!-- Access to Page -->
     <div id="modal" class="modal">
-        <div class="modal-content animate">
+        <div id="modal-content">
             <h3 align="center"><b>The page is privated by the owner</b></h3>
             <div style="padding:16px;">
-                <small id="incorrect" style="display:none;color:red;">The password you entered is incorrect.</small>
-                <input id="access" type="password" placeholder="Enter password to access" name="psw" required>
+                <input style="transition:0.3s;" id="access" type="password" placeholder="Enter password to access" name="psw" required>
                 <button id="accessBtn" type="submit" onclick="Password()" style="transition:0.3s;">Confirm</button>
             </div>
-            <div style="background-color:#f1f1f1; padding:16px;">
+            <div style="background-color:#f1f1f1; padding:16px;" class="w3-center">
                 <button type="button" onclick="javascript:location.href='index.html'" class="cancelbtn" style="transition:0.3s;">Back to homepage</button>
             </div>
         </div>
@@ -435,8 +434,8 @@
                             <img id="flipbook" src="image/Magazine-NE/p1.jpg"/>
 
                             <div class="w3-display-middle" style="background-color: rgba(0,0,0,0.4);width:30%;">
-                                <div class="w3-display-left flipbookbtn w3-indigo" onclick="flipbook(-1)"><i class="fa fa-chevron-left w3-display-middle"></i></div>
-                                <div class="w3-display-right flipbookbtn w3-indigo" onclick="flipbook(1)"><i class="fa fa-chevron-right w3-display-middle"></i></div>
+                                <div class="w3-display-left flipbookbtn" onclick="flipbook(-1)"><i class="fa fa-chevron-left w3-display-middle"></i></div>
+                                <div class="w3-display-right flipbookbtn" onclick="flipbook(1)"><i class="fa fa-chevron-right w3-display-middle"></i></div>
                             </div>
                         </div>
                         <div class="w3-center">
@@ -460,6 +459,19 @@
                         <div class="w3-center">
                             <img src="https://image.ibb.co/kOpkBp/WW1_history_S.jpg"/>
                         </div>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>โมเดลโรงเลี้ยงไก่</b></h5>
+                        <h6 class="w3-text-indigo"><i class="fa fa-wrench fa-fw w3-margin-right"></i>นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</h6>
+                        <div class="w3-center">
+                            <img src="image/model3d_CHAI/1.png"/>
+                            <img src="image/model3d_CHAI/2.png"/>
+                            <img src="image/model3d_CHAI/3.png"/>
+                            <img src="image/model3d_CHAI/4.png"/>
+                            <img src="image/model3d_CHAI/5.png"/>
+                        </div>
+                        <p>โมเดลนี้ถูกนำไปใช้เป็นส่วนหนึ่งของโครงงานการจัดวางหลอดไฟภายในโรงเรือนเลี้ยงไก่ขนาดเล็กแบบหน้าจั่วเพื่อให้แสงสว่างที่เพียงพอต่อการเลี้ยงไก่ไข่และให้เกิดความคุ้มค่ามากที่สุดต่อการเลี้ยงไก่หนึ่งรอบ</p>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -490,7 +502,7 @@
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลระดับเหรียญเงินการประกวดโครงงานดีเด่นสะเต็มศึกษารอบคัดเลือก ระดับมัธยมศึกษาตอนปลาย</b></h5>
-                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>ศูนย์สะเต็มศึกษาภาคเหนือตอนบน โรงเรียนยุพราชวิทยาลัย</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>9 กรกฎาคม 2561</h6>
                         <div class="w3-center">
                             <img src="image/certification/STEM2561_silver.jpeg"/>
@@ -498,8 +510,8 @@
                         <hr>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>รางวัลรองชนะเลิศอันดับ 2 การแข่งขันประกวดโครงงาน สาขาคอมพิวเตอร์</b></h5>
-                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนยุพราชวิทยาลัย</h6>
+                        <h5 class="w3-opacity"><b>รางวัลรองชนะเลิศอันดับ 2 การแข่งขันประกวดโครงงาน สาขาคอมพิวเตอร์ ระดับชั้นมัธยมศึกษาปีที่ 6</b></h5>
+                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>โรงเรียนยุพราชวิทยาลัย จังหวัดเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7 สิงหาคม 2561</h6>
                         <div class="w3-center">
                             <img src="image/certification/ProjectYRC_award.jpeg"/>
@@ -507,7 +519,7 @@
                         <hr>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>รางวัลชนะเลิศการแข่งขันเขียนโปรแกรม Computer Programming Contest</b></h5>
+                        <h5 class="w3-opacity"><b>รางวัลชนะเลิศการแข่งขันเขียนโปรแกรมคอมพิวเตอร์ระดับมัธยมศึกษาตอนปลาย Computer Programming Contest</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยราชภัฏเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7 สิงหาคม 2561</h6>
                         <div class="w3-center">
@@ -516,7 +528,7 @@
                         <hr>
                     </div>
                     <div class="w3-container">
-                        <h5 class="w3-opacity"><b>รางวัลชมเชยการแข่งขันเขียนโปรแกรม iCode 2018</b></h5>
+                        <h5 class="w3-opacity"><b>รางวัลชมเชยการแข่งขันเขียนโปรแกรมคอมพิวเตอร์ระดับมัธยมศึกษาตอนปลาย iCode 2018</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมคอมพิวเตอร์ มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>19 สิงหาคม 2561</h6>
                         <div class="w3-center">
@@ -526,8 +538,14 @@
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>รางวัลระดับเหรียญเงินการประกวดโครงงานสะเต็มศึกษา Student STEM Project Contest ระดับมัธยมศึกษาตอนปลาย</b></h5>
-                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>ศูนย์สะเต็มศึกษาภาคเหนือตอนบน โรงเรียนยุพราชวิทยาลัย</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>สถาบันส่งเสริมการสอนวิทยาศาสตร์และเทคโนโลยี</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>14 กันยายน 2561</h6>
+                        <hr>
+                    </div>
+                    <div class="w3-container">
+                        <h5 class="w3-opacity"><b>รางวัลชนะเลิศการแข่งขันเขียนโปรแกรมด้วยภาษาคอมพิวเตอร์ระดับมัธยมศึกษาตอนปลาย งานศิลปะหัตถกรรมนักเรียน ระดับเขตพื้นที่การศึกษา ครั้งที่ 68</b></h5>
+                        <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw w3-margin-right"></i>สำนักพัฒนากิจกรรมนักเรียน สำนักงานคณะกรรมการการศึกษาขั้นพื้นฐาน กระทรวงศึกษาธิการ</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2 ตุลาคม 2561</h6>
                     </div>
                 </div>
 
@@ -558,7 +576,7 @@
         <div onclick="Highlight('workexperience')"><i class="fa fa-briefcase w3-margin-right"></i>ประสบการณ์การทำงาน</div>
     </div>
 
-    <div id="navbar">
+    <div id="navbar" style="display:none;">
         <a class="text" href="https://kemaoaods.github.io/main/"><img src="image/mylogo1.ico" style="max-width: 20px; transform:scale(1.5)" /></a>
         <a class="text" href="https://kemaoaods.github.io/main/index.html" target="_self"><b>Home</b></a>
         <a class="text" href="https://kemaoaods.github.io/main/portfolio.html"><b>Portfolio</b></a>
