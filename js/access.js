@@ -1,4 +1,4 @@
-﻿var isLocked = true;
+﻿var isLocked = false;
 function noscroll() {
     if (isLocked === true) window.scrollTo( 0, 0 );
     else document.getElementById('modal').style.display = "none";
