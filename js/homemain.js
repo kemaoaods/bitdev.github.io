@@ -165,3 +165,8 @@ window.scroll({
     left: 0, 
     behavior: 'smooth' 
 });
+
+var asas = [];
+function ConsoleTest() {
+    alert(typeof(asas));
+}
