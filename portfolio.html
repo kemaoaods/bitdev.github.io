@@ -29,15 +29,13 @@
     </header>
 
     <!-- Access to Page -->
-    <div id="modal" class="modal">
+    <div id="modal">
         <div id="modal-content">
-            <h3 align="center"><b>The page is privated by the owner</b></h3>
-            <div style="padding:16px;">
-                <input style="transition:0.3s;" id="access" type="password" placeholder="Enter password to access" name="psw" required>
-                <button id="accessBtn" type="submit" onclick="Password()" style="transition:0.3s;">Confirm</button>
-            </div>
-            <div style="background-color:#f1f1f1; padding:16px;" class="w3-center">
-                <button type="button" onclick="javascript:location.href='index.html'" class="cancelbtn" style="transition:0.3s;">Back to homepage</button>
+            <h3 style="margin-bottom:20px"><b>The page is privated by the owner</b></h3>
+            <input style="transition:0.3s;" id="access" type="password" placeholder="Enter password to access" name="psw" required>
+            <div>
+                <button style="width:80%;" id="accessBtn" onclick="Password()">Confirm</button>
+                <button style="width:18%;" onclick="javascript:location.href='index.html'"><i style="transform: scale(1.5)" class="fa fa-home"></i></button>
             </div>
         </div>
     </div>
