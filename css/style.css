@@ -107,13 +107,17 @@ th, td {
     margin-left: 0px;
 }
 
-.photoplace img {
+.photoplace :not(.column) img {
     max-width:19%;
     width:auto;
     border-radius: 4px;
     margin-bottom: 4px;
     margin-top: 4px;
     box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.photoplace .column img {
     cursor: pointer;
 }
 
@@ -152,6 +156,21 @@ th, td {
     max-width: 60%;
     max-height: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from { -webkit-transform: scale(0) }
+    to { -webkit-transform: scale(1) }
+}
+
+@keyframes animatezoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
 }
 
 .tooltip {

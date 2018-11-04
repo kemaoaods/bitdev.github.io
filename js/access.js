@@ -1,7 +1,13 @@
-﻿var isLocked = true;
-function noscroll() {
-    if (isLocked === true) window.scrollTo( 0, 0 );
-    else document.getElementById('modal').style.display = "none";
+﻿var isLocked = false;
+window.onload = function noscroll() {
+    if (isLocked === true) { 
+        window.scrollTo( 0, 0 );
+        document.documentElement.style.overflow = "hidden";
+    }
+    else {
+        document.getElementById('modal').style.display = "none";
+        document.documentElement.style.overflow = "auto";
+    }
 }
 
 document.getElementById("access").addEventListener("keyup", function(event) {
@@ -13,7 +19,7 @@ function Password() {
     if (document.getElementById("access").value === "48826") {
         document.getElementById('modal').style.display = "none";
         document.getElementById('navbar').style.display = "block";
-        window.removeEventListener('scroll', noscroll);
+        document.documentElement.style.overflow = "hidden";
     }
     else {
         if ( document.getElementById('modal-content').classList.contains("shakesideplay")) document.getElementById('modal-content').classList.remove("shakesideplay");
@@ -32,5 +38,3 @@ function Password() {
         }, 2000);
     }
 }
-
-window.addEventListener('scroll', noscroll);
