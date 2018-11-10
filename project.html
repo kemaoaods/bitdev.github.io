@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html lang="th">
 <head>
-    <title>BitDeveloper | Project</title>
+    <title>Dev Khem | My Projects</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -11,59 +11,46 @@
     <link rel="shortcut icon" type="image/x-icon" href="image/mylogo1.ico" />
 </head>
 <body>
-    <header class="w3-display-container w3-content w3-center" style="max-width:1920px">
+    <header class="w3-display-container" style="max-width:100%;">
         <div class="parallax"></div>
-        <!-- <img class="parallax w3-image" src="image/8-Bit-Wallpaper-07-3200x2048.jpg" alt="Wallpeper" width="1500" height="600"> -->
-        <div class="w3-display-middle w3-padding-large w3-border w3-wide w3-text-light-grey w3-center" style="background-color: rgba(0,0,0,0.4);">
-            <h1 class="w3-hide-medium w3-hide-small w3-xxxlarge">APISIT RITREUNGROJ<br>AKA BitDeveloper</h1>
-            <h5 class="w3-hide-large" style="white-space:nowrap">APISIT RITREUNGROJ<br>AKA BitDeveloper</h5>
-            <h3 class="w3-hide-medium w3-hide-small" id="role" style="transition:0.3s;"></h3>
-        </div>
-        <!-- Selector (placed at the bottom of the header image) -->
-        <div class="w3-bar w3-light-grey w3-round w3-display-bottommiddle w3-hide-small" style="bottom:-16px;">
-            <a href="https://kemaoaods.github.io/main/index.html" target="_self" class="w3-bar-item w3-button" style="transition:0.3s;">Home</a>
-            <a href="https://kemaoaods.github.io/main/portfolio.html" class="w3-bar-item w3-button" style="transition:0.3s;">Portfolio</a>
-            <a href="https://kemaoaods.github.io/main/project.html" target="_self" class="w3-bar-item w3-button" style="transition:0.3s;">Project</a>
+        <div class="w3-display-middle w3-padding-large w3-border">
+            <h3>Hello, I'm</h3>
+            <h1>APISIT RITREUNGROJ</h1>
+            <hr>
+            <h3 id="role"></h3>
         </div>
     </header>
 
     <!-- Page content -->
-    <div class="w3-padding-large w3-margin-top">
-        <div id="document" class="w3-content w3-light-grey w3-padding-large w3-padding-16 w3-margin-top">
-            <h4><b>Projects and documents</b></h4>
+    <div class="w3-content w3-padding-large w3-margin-top">
+        <div id="document" class="innercontent">
+            <h4><b>My Projects and Documents</b></h4>
             <input type="text" placeholder="Search document..." id="search" onkeyup="Searching()" style="margin-bottom:15px;">
 
-            <h2 id="emptyresult" align="center" style="margin:54px;display:none"><b>No result to show</b></h2>
+            <h2 id="emptyresult" style="margin:54px;display:none;text-align:center;"><b>No result to show</b></h2>
 
-            <div style="background-color:white;padding-bottom:25px" class="w3-container w3-round">
+            <div id="storedlist" style="background-color:white;padding-bottom:25px" class="innercontent">
                 <div class="w3-padding-32">
-                    <a href="project/project0.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
-                    <h6><b>วิชาหน้าที่ผลเมือง proj01</b><span class="w3-tag w3-round w3-indigo" style="margin-left:6px">1 May 2018</span></h6>
-                    <span class="w3-text-grey">Description: </span>
-                    <span class="w3-text-grey">เพจความรู้เรื่องเรือนกาแล</span>
+                    <a href="project/project2.html"><img src="image/Projectfile.png" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
+                    <h6><b>Synonym Ball (เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ)</b></h6>
+                    <li class="maincolor">Publish Date: <span style="font-weight:bold">13 September 2018</span></li>
+                    <li class="w3-text-grey">Description: The early pre-released version of Synonym Ball for testing WebGL on web browsers.</li>
                 </div>
                 <div class="w3-padding-32">
-                    <a href="project/project1.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
-                    <h6><b>วิชาหน้าที่ผลเมือง proj02</b><span class="w3-tag w3-round w3-indigo" style="margin-left: 6px">3 May 2018</span></h6>
-                    <span class="w3-text-grey">Description: </span>
-                    <span class="w3-text-grey">เพจความรู้เรืองขนมเทียน</span>
-                </div>
-                <div class="w3-padding-32">
-                    <a href="project/project2.html"><img src="image/Projectfile.png" alt="Image" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
-                    <h6><b>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ</b><span class="w3-tag w3-round w3-indigo" style="margin-left: 6px">13 September 2018</span></h6>
-                    <span class="w3-text-grey">Description: </span>
-                    <span class="w3-text-grey">ทดสอบระบบของเกมผ่าน WebGL</span>
+                    <a href="https://kemaoaods.github.io/sovereigntystates/" target="_blank"><img src="image/Projectfile.png" class="w3-left w3-margin-right w3-hover-opacity" style="width:110px;transition:0.3s;"></a>
+                    <h6><b>Sovereignty: States (Developer Alpha Status)</b></h6>
+                    <li class="maincolor">Publish Date: <span style="font-weight:bold">22 September 2018</span></li>
+                    <li class="w3-text-grey">Description: The game is in developing status by the developer.</li>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="navbar">
-        <a class="text" href="https://kemaoaods.github.io/main/"><img src="image/mylogo1.ico" style="max-width: 20px; transform: scale(1.5)" /></a>
-        <a class="text" href="https://kemaoaods.github.io/main/index.html" target="_self"><b>Home</b></a>
-        <a class="text" href="https://kemaoaods.github.io/main/portfolio.html"><b>Portfolio</b></a>
-        <a class="text" href="https://kemaoaods.github.io/main/project.html" target="_self"><b>Project</b></a>
-        <a class="ico" href="https://www.facebook.com/aps.khem" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
+        <a class="text" href="index.html"><img src="image/mylogo1.ico" style="max-width:20px;transform:scale(1.5);"/></a>
+        <a class="text" href="about.html" target="_self"><b>About</b></a>
+        <a class="text" href="portfolio.html"><b>Portfolio</b></a>
+        <a class="text" href="project.html" target="_self"><b>My Projects</b></a>
     </div>
     
     <div style="background-color:#333;color:white;" class="w3-center w3-padding-24">
@@ -77,7 +64,7 @@
             <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><i class="fa fa-google-plus w3-hover-opacity"></i></a>
             <div class="tooltip"><i class="fa fa-envelope w3-hover-opacity"></i><span class="tooltiptext">cyber1.record@gmail.com<br>apisit_lon@hotmail.com</span></div>
         </div>
-        <a href="https://kemaoaods.github.io/main/index.html" target="_self">HOME</a> | <a href="https://kemaoaods.github.io/main/portfolio.html" target="_self">PORTFOIO</a> | <a href="https://kemaoaods.github.io/main/project.html" target="_self">PROJECT</a><br>&copy 2018 kemaoaods.github.io All Rights Reserved.
+        <a href="index.html" target="_self">HOME</a> | <a href="portfolio.html" target="_self">PORTFOIO</a> | <a href="project.html" target="_self">PROJECT</a><br>&copy 2018 kemaoaods.github.io All Rights Reserved.
     </div>
 
     <script src="js/homemain.js"></script>

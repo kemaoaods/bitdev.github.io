@@ -1,4 +1,4 @@
-﻿var isLocked = false;
+﻿var isLocked = true;
 window.onload = function noscroll() {
     if (isLocked === true) { 
         window.scrollTo( 0, 0 );
@@ -19,7 +19,9 @@ function Password() {
     if (document.getElementById("access").value === "48826") {
         document.getElementById('modal').style.display = "none";
         document.getElementById('navbar').style.display = "block";
-        document.documentElement.style.overflow = "hidden";
+        document.documentElement.style.overflow = "auto";
+        document.getElementById("@port").removeAttribute("style");
+        document.getElementById("@port").style.maxWidth = "1400px"
     }
     else {
         if ( document.getElementById('modal-content').classList.contains("shakesideplay")) document.getElementById('modal-content').classList.remove("shakesideplay");

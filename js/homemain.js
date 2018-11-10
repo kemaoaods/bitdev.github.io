@@ -29,6 +29,11 @@ function AnimatedText(target, texts, changeInterval, updateInterval, onTextChang
     }
 };
 
+document.documentElement.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 192) location.reload();
+});
+
 var sidenav = document.getElementById("sidenav");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
@@ -80,28 +85,25 @@ window.onscroll = function() {
 }
 
 function Searching() {
-    var input, h6, count;
+    var input, list, count;
     input = document.getElementById("search");
-    div = document.getElementById("document");
-    h6 = div.getElementsByTagName("h6");
-    count = h6.length
-    for (var i = 0; i < h6.length; i++) {
-        if (h6[i].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
-            h6[i].parentElement.style.display = "block";
+    list = document.getElementById("document").getElementsByTagName("h6");
+    count = list.length;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+            list[i].parentElement.style.display = "block";
         } else {
-            h6[i].parentElement.style.display = "none";
+            list[i].parentElement.style.display = "none";
             count--;
         }
     }
-    EmptyResult(count);
-}
-
-function EmptyResult(i) {
-    if (i === 0) {
+    if (count == 0) {
         document.getElementById("emptyresult").style.display = "block";
+        document.getElementById("storedlist").style.display = "none";
     }
     else {
         document.getElementById("emptyresult").style.display = "none";
+        document.getElementById("storedlist").style.display = "block";
     }
 }
 
