@@ -45,7 +45,7 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 
-    if (document.documentElement.scrollTop > document.getElementById('profile').offsetTop - 2) {
+    /*if (document.documentElement.scrollTop > document.getElementById('profile').offsetTop - 2) {
         sidenav.style.right = "0";
         if (document.documentElement.scrollTop >= document.getElementById('workexperience').offsetTop) {
             select(6);
@@ -82,6 +82,16 @@ window.onscroll = function() {
         sidenav.children[index].style.color = "black";
         document.getElementById("navbar").style.top = "-60px";
     }
+
+    <div id="sidenav" class="w3-display-right">
+        <div onclick="Highlight('profile')"><i class="fa fa-address-card w3-margin-right"></i>ประวัติส่วนตัว</div>
+        <div onclick="Highlight('education')"><i class="fa fa-graduation-cap w3-margin-right"></i>ประวัติการศึกษา</div>
+        <div onclick="Highlight('educationaldisplay')"><i class="fa fa-file-text w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</div>
+        <div onclick="Highlight('activities')"><i class="fa fa-gamepad w3-margin-right"></i>กิจกรรมที่เข้าร่วม</div>
+        <div onclick="Highlight('works')"><i class="fa fa-puzzle-piece w3-margin-right"></i>ผลงาน</div>
+        <div onclick="Highlight('awards')"><i class="fa fa-trophy w3-margin-right"></i>รางวัลและเกียรติบัตร</div>
+        <div onclick="Highlight('workexperience')"><i class="fa fa-briefcase w3-margin-right"></i>ประสบการณ์การทำงาน</div>
+    </div>*/
 }
 
 function Searching() {
@@ -162,13 +172,25 @@ function flipbook(flip) {
     flipbookpage.innerHTML = Number(flipbookpage.innerHTML) + flip;
 }
 
+for (var i = 0; i < document.getElementById("portfolio").childElementCount; i++) {
+    (function(index){
+        document.getElementById("portheadingbuttons").children[i].addEventListener("click", function(){
+            for (var j = 0; j < document.getElementById("portfolio").childElementCount; j++) {
+                if (index == j) {
+                    document.getElementById("portfolio").children[j].style.display = "block";
+                    document.getElementById("portheadingbuttons").children[j].classList.add("clicked");
+                }
+                else {
+                    document.getElementById("portfolio").children[j].style.display = "none";
+                    document.getElementById("portheadingbuttons").children[j].classList.remove("clicked");
+                }
+            }
+        });
+    })(i);
+}
+
 window.scroll({
     top: 0, //use when scroll up''
     left: 0, 
     behavior: 'smooth' 
 });
-
-var asas = [];
-function ConsoleTest() {
-    alert(typeof(asas));
-}

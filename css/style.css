@@ -15,7 +15,7 @@ hr {
     height: 1px;
     border: 0;
     border-top: 1px solid #BEBEBE;
-    margin: 0px; /* margin: 1em 0; */
+    margin: 0px;
     padding: 0; 
 }
 
@@ -23,15 +23,8 @@ input:focus, button:focus {
     outline: none;
 }
 
-/* Comparison */
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-
-th, td {
-    padding: 5px;
-    text-align: center;
+#portheadingbuttons .fa, #profile .fa, #education .fa, #educationaldisplay .fa, #activities .fa, #works .fa, #awards .fa, #workexperience .fa {
+    margin-right: 12px;
 }
 
 /* Normal Contents */
@@ -98,7 +91,7 @@ header .w3-display-middle {
     border-bottom: 5px solid #4054b2;
 }
 
-.parallax { /* use with upper wallpaper */
+.parallax {
     background-image: url("../image/memain.jpg");
     height: 400px;
     width: auto;
@@ -107,41 +100,27 @@ header .w3-display-middle {
     background-size: cover;
 }
 
-#sidenav {
-    position: fixed;
-    right: -40px;
-    top: 40%;
-    max-width: 210px;
-    height: auto; /* Full height */
-    transition: 0.3s;
-}
-
-#sidenav div {
-    color: white;
-    background-color:#333;
-    width: 100%;
-    padding: 8px;
-    margin-left: 175px;
-    transition: 0.3s;
-}
-
-#sidenav div:hover {
-    cursor: pointer;
-    margin-left: 0px;
-}
-
 .photoplace :not(.column) img {
-    max-width:19%;
-    width:auto;
+    max-width: 24%;
+    width: auto;
     border-radius: 4px;
     margin-bottom: 4px;
     margin-top: 4px;
-    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.2);
     cursor: pointer;
+    transition: 0.3s;
+}
+
+.photoplace :not(.column) img:hover {
+    transform: translate(0,-20px);;
 }
 
 .photoplace .column img {
     cursor: pointer;
+}
+
+.photoplace .column img:hover {
+    transform: translate(0,-20px);;
 }
 
 .flipbookbtn {
@@ -160,22 +139,20 @@ header .w3-display-middle {
 }
 
 #photomodal {
-    display: block; /* Popup by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); 
     padding-top: 120px;
 }
 
 #photomodal img {
     background-color: #fefefe;
-    width: auto; /* Could be more or less, depending on screen size */
+    width: auto;
     max-width: 60%;
     max-height: 90%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -310,7 +287,7 @@ header .w3-display-middle {
 
 /* Search Bar */
 input[id=search] {
-    width: 210px;
+    width: 100%;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 40px;
@@ -344,4 +321,21 @@ input[id=search]:focus {
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+#portheadingbuttons a {
+    display: inline-table;
+    width: 100%;
+    text-align: left;
+    padding: 8px;
+}
+
+#portheadingbuttons a:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+#portheadingbuttons .clicked {
+    pointer-events: none;
+    background-color: gainsboro;
 }
