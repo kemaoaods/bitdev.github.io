@@ -14,28 +14,78 @@
     <script>
         var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Synomym Ball Demo.json");
     </script>
+    <style>
+        header {
+            width: 85%;
+            left: 0;
+            right: 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 60px;
+        }
+        header span {
+            font-weight: bold;
+        }
+        #game-resp-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%;
+            box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
+            border-radius: 8px;
+        }
+        #game-resp-container > #gameContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+    </style>
 </head>
 <body>
-    <header class="w3-display-container" style="max-width:100%;">
-        <div style="height:800px"></div>
-        <div id="gameContainer" style="width:1280px;height:720px;margin-top:80px;box-shadow: 0px 0px 15px rgba(0,0,0,0.2);" class="w3-display-middle"></div>
+    <header>
+        <div id="game-resp-container">
+            <div id="gameContainer"></div>
+        </div>
+        <li><span>Press "0"</span> to Play in Fullscreen, <span>Press "9"</span> to Enable/Disable Navigation Bar</li>
     </header>
     
     <div class="w3-content w3-padding-large w3-margin-top">
         <div class="innercontent">
-            <li>ชื่อเกม: เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ(thai), Synomym Ball)(English)</li>
-            <li>ผู้จำหน่าย: นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</li>
-            <li>ควบคุมผลิต: นายการิน บุญยืน</li>
-            <li>ผู้ออกแบบ: นายการิน บุญยืนและนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</li>
-            <li>ผู้เขียนโปรแกรม: นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</li>
-            <li>โปรแกรมออกแบบ: Unity</li>
-            <li>ชนิดของเกม: ง่ายๆ, เพื่อการศึกษา</li>
-            <li>วันวางจำหน่าย: 13 กันยายน ศ.ค. 2018</li>
-            <li>โหมด: ผู้เล่นเดี่ยว</li>
+            <div class="w3-quarter" style="font-weight:bold">
+                <li>Game</li><br>
+                <li>Publisher</li>
+                <li>Producer</li>
+                <li>Game Designer(s)</li><br>
+                <li>Developer</li>
+                <li>Engine</li>
+                <li>Genre</li>
+                <li>Platform(s)</li>
+                <li>Publish Date</li>
+                <li>Mode</li>
+                <li>Version</li>
+            </div>
+            <div class="w3-threequarter">
+                <li>Synonym Ball,</li>
+                <li>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ (Thai)</li>
+                <li>Apisit Ritreungroj</li>
+                <li>Garin Boonyeun</li>
+                <li>Garin Boonyeun,</li>
+                <li>Apisit Ritreungroj</li>
+                <li>Apisit Ritreungroj</li>
+                <li>Unity</li>
+                <li>Casual, Educational</li>
+                <li>Web Browsers (Ideal: Google Chrome)</li>
+                <li>13 September 2018</li>
+                <li>Single Player</li>
+                <li>1.0</li>
+            </div>
+            <div class="w3-container"></div>
         </div>
     </div>
 
-    <div id="navbar">
+    <div id="navbar" style="display:none;">
         <a class="text" href="../index.html"><img src="../image/mylogo1.ico" style="max-width:20px;transform:scale(1.5);"/></a>
         <a class="text" href="../about.html"><b>About</b></a>
         <a class="text" href="../portfolio.html"><b>Portfolio</b></a>
@@ -56,6 +106,7 @@
         <a href="../index.html">HOME</a> | <a href="../portfolio.html">PORTFOIO</a> | <a href="../project.html">PROJECT</a><br>&copy 2018 kemaoaods.github.io All Rights Reserved.
     </div>
 
+    <script src="../js/gamecontroller.js"></script>
     <script src="../js/homemain.js"></script>
 </body>
 </html>
