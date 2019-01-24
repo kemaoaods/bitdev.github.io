@@ -1,13 +1,12 @@
-﻿var a = document.getElementById("role");
-var b = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
-var c = 4000; //(optional, default 4000): time between string changes in ms
-var d = 15; //(optional, default 50) : time between character changes in ms
-var e = true; //(optional): a callback function called when a character is changed (useful for animations)
-AnimatedText(a, b, c, d, e);
+﻿var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
+if (document.getElementById("role") != null) {
+    AnimatedText(a, 4000, 20, true);
+}
 
-function AnimatedText(target, texts, changeInterval, updateInterval, onTextChanged) {
+function AnimatedText(texts, changeInterval, updateInterval, onTextChanged) {
     var currentText = parseInt(Math.random() * texts.length);
     var areaText = texts[0];
+
     this.t1 = setInterval(function() {
         var c = parseInt(Math.random() * Math.max(texts[currentText].length, areaText.length));
         var s = texts[currentText][c];
@@ -16,18 +15,21 @@ function AnimatedText(target, texts, changeInterval, updateInterval, onTextChang
         var newText = (areaText.slice(0, c) + s + areaText.slice(c + 1)).trim();
         var diff = !(newText == areaText);
         areaText = newText;
-        if (onTextChanged && diff) onTextChanged();
-        target.innerHTML = areaText.length == 0 ? "&nbsp;" : areaText;
+        if (onTextChanged && diff) onTextChanged = true;
+        document.getElementById("role").textContent = areaText.length == 0 ? "&nbsp;" : areaText;
     }.bind(this), updateInterval ? updateInterval : 50);
+
     this.t2 = setInterval(function() {
         currentText = parseInt(Math.random() * texts.length);
-        }.bind(this), changeInterval ? changeInterval : 4000);
+    }.bind(this), changeInterval ? changeInterval : 4000);
+}
+
+AnimatedText.prototype = {
+    constructor: AnimatedText,
+    stop: function() {
+        clearInterval(this.t1); clearInterval(this.t2); 
     }
-    AnimatedText.prototype = {
-        constructor: AnimatedText,
-        stop: function() { clearInterval(this.t1); clearInterval(this.t2); 
-    }
-};
+}
 
 document.documentElement.addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -172,21 +174,23 @@ function flipbook(flip) {
     flipbookpage.innerHTML = Number(flipbookpage.innerHTML) + flip;
 }
 
-for (var i = 0; i < document.getElementById("portfolio").childElementCount; i++) {
-    (function(index){
-        document.getElementById("portheadingbuttons").children[i].addEventListener("click", function(){
-            for (var j = 0; j < document.getElementById("portfolio").childElementCount; j++) {
-                if (index == j) {
-                    document.getElementById("portfolio").children[j].style.display = "block";
-                    document.getElementById("portheadingbuttons").children[j].classList.add("clicked");
+if (document.getElementById("portfolio") != null) {
+    for (var i = 0; i < document.getElementById("portfolio").childElementCount; i++) {
+        (function(index){
+            document.getElementById("portheadingbuttons").children[i].addEventListener("click", function(){
+                for (var j = 0; j < document.getElementById("portfolio").childElementCount; j++) {
+                    if (index == j) {
+                        document.getElementById("portfolio").children[j].style.display = "block";
+                        document.getElementById("portheadingbuttons").children[j].classList.add("clicked");
+                    }
+                    else {
+                        document.getElementById("portfolio").children[j].style.display = "none";
+                        document.getElementById("portheadingbuttons").children[j].classList.remove("clicked");
+                    }
                 }
-                else {
-                    document.getElementById("portfolio").children[j].style.display = "none";
-                    document.getElementById("portheadingbuttons").children[j].classList.remove("clicked");
-                }
-            }
-        });
-    })(i);
+            });
+        })(i);
+    }
 }
 
 window.scroll({
