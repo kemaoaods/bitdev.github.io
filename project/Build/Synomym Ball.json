@@ -1,0 +1,13 @@
+{
+"companyName": "Apisit Ritreungroj",
+"productName": "Synonym Ball",
+"dataUrl": "Synomym Ball.data.unityweb",
+"asmCodeUrl": "Synomym Ball.asm.code.unityweb",
+"asmMemoryUrl": "Synomym Ball.asm.memory.unityweb",
+"asmFrameworkUrl": "Synomym Ball.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
