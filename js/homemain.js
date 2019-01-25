@@ -47,53 +47,9 @@ window.onscroll = function() {
     }
     prevScrollpos = currentScrollPos;
 
-    /*if (document.documentElement.scrollTop > document.getElementById('profile').offsetTop - 2) {
-        sidenav.style.right = "0";
-        if (document.documentElement.scrollTop >= document.getElementById('workexperience').offsetTop) {
-            select(6);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('awards').offsetTop) {
-            select(5);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('works').offsetTop) {
-            select(4);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('activities').offsetTop) {
-            select(3);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('educationaldisplay').offsetTop) {
-            select(2);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('education').offsetTop) {
-            select(1);
-        }
-        else if (document.documentElement.scrollTop >= document.getElementById('profile').offsetTop) {
-            select(0);
-        }
-    }
-    else {
-        sidenav.style.right = "-40px";
-    }
-
-    function select(index) {
-        for (var i = 0; i < sidenav.childElementCount; i++) {
-            sidenav.children[i].style.backgroundColor = "#333";
-            sidenav.children[i].style.color = "white";
-        }
-        sidenav.children[index].style.backgroundColor = "white";
-        sidenav.children[index].style.color = "black";
-        document.getElementById("navbar").style.top = "-60px";
-    }
-
-    <div id="sidenav" class="w3-display-right">
-        <div onclick="Highlight('profile')"><i class="fa fa-address-card w3-margin-right"></i>ประวัติส่วนตัว</div>
-        <div onclick="Highlight('education')"><i class="fa fa-graduation-cap w3-margin-right"></i>ประวัติการศึกษา</div>
-        <div onclick="Highlight('educationaldisplay')"><i class="fa fa-file-text w3-margin-right"></i>ระเบียนแสดงผลการศึกษา</div>
-        <div onclick="Highlight('activities')"><i class="fa fa-gamepad w3-margin-right"></i>กิจกรรมที่เข้าร่วม</div>
-        <div onclick="Highlight('works')"><i class="fa fa-puzzle-piece w3-margin-right"></i>ผลงาน</div>
-        <div onclick="Highlight('awards')"><i class="fa fa-trophy w3-margin-right"></i>รางวัลและเกียรติบัตร</div>
-        <div onclick="Highlight('workexperience')"><i class="fa fa-briefcase w3-margin-right"></i>ประสบการณ์การทำงาน</div>
-    </div>*/
+    //document.getElementById('workexperience').offsetTop)
+    //document.documentElement.scrollTop
+    //document.getElementById("navbar").style.top = "-60px"
 }
 
 function Searching() {
@@ -137,14 +93,6 @@ window.onclick = function(event) {
     }
 }
 
-function Highlight(elementid) {
-    window.scroll({
-        top: document.getElementById(elementid).offsetTop, //use when scroll up''
-        left: 0, 
-        behavior: 'smooth'
-    });
-}
-
 window.onload = function sharedLayout() {
     for (var i = 0; i < document.getElementsByTagName("div").length; i++) {
         var elmnt = document.getElementsByTagName("div")[i];
@@ -169,9 +117,9 @@ window.onload = function sharedLayout() {
 function flipbook(flip) {
     var flipbook = document.getElementById("flipbook");
     var flipbookpage = document.getElementById("flipbookpage");
-    if ((flipbookpage.innerHTML == 1 && flip == -1)||(flipbookpage.innerHTML == 12 && flip == 1)) flip = 0;
-    flipbook.src = "image/Magazine-NE/p" + (Number(flipbookpage.innerHTML) + flip) + ".jpg";
-    flipbookpage.innerHTML = Number(flipbookpage.innerHTML) + flip;
+    if ((flipbookpage.textContent == 1 && flip == -1) || (flipbookpage.textContent == 12 && flip == 1)) flip = 0;
+    flipbook.src = "image/Magazine-NE/p" + (Number(flipbookpage.textContent) + flip) + ".jpg";
+    flipbookpage.textContent = Number(flipbookpage.textContent) + flip;
 }
 
 if (document.getElementById("portfolio") != null) {
