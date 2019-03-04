@@ -1,5 +1,11 @@
-﻿var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
-if (document.getElementById("role") != null) {
+﻿//Shorten function
+function ID(id) {
+    return document.getElementById(id);
+}
+
+//SWITCHING TEXTS ON MENU
+var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
+if (ID("role") != null) {
     AnimatedText(a, 4000, 20, true);
 }
 
@@ -31,31 +37,31 @@ AnimatedText.prototype = {
     }
 }
 
+// PRESS '`' to reload
 document.documentElement.addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode === 192) location.reload();
+    if (event.keyCode === "Backquote") location.reload();
 });
 
-var sidenav = document.getElementById("sidenav");
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+        ID("navbar").style.top = "0";
     } else {
-        document.getElementById("navbar").style.top = "-60px";
+        ID("navbar").style.top = "-60px";
     }
     prevScrollpos = currentScrollPos;
 
-    //document.getElementById('workexperience').offsetTop)
+    //ID('workexperience').offsetTop)
     //document.documentElement.scrollTop
-    //document.getElementById("navbar").style.top = "-60px"
+    //ID("navbar").style.top = "-60px"
 }
 
 function Searching() {
     var input, list, count;
-    input = document.getElementById("search");
-    list = document.getElementById("document").getElementsByTagName("h6");
+    input = ID("search");
+    list = ID("document").getElementsByTagName("h6");
     count = list.length;
     for (var i = 0; i < list.length; i++) {
         if (list[i].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
@@ -66,12 +72,12 @@ function Searching() {
         }
     }
     if (count == 0) {
-        document.getElementById("emptyresult").style.display = "block";
-        document.getElementById("storedlist").style.display = "none";
+        ID("emptyresult").style.display = "block";
+        ID("storedlist").style.display = "none";
     }
     else {
-        document.getElementById("emptyresult").style.display = "none";
-        document.getElementById("storedlist").style.display = "block";
+        ID("emptyresult").style.display = "none";
+        ID("storedlist").style.display = "block";
     }
 }
 
@@ -79,9 +85,9 @@ var focusablephoto = document.getElementsByClassName("photoplace");
 for (var i = 0; i < focusablephoto.length; i++) {
     for (var j = 0; j < focusablephoto[i].getElementsByTagName("img").length; j++) {
             focusablephoto[i].getElementsByTagName("img")[j].addEventListener("click", function(){
-            document.getElementById("focusimg").src = this.src;
-            document.getElementById("photomodal").style.display = "block";
-            //document.getElementById("caption").innerHTML = element.alt;
+            ID("focusimg").src = this.src;
+            ID("photomodal").style.display = "block";
+            //ID("caption").innerHTML = element.alt;
         });
     }
 }
@@ -93,6 +99,7 @@ window.onclick = function(event) {
     }
 }
 
+//CONNECTED PAGE
 window.onload = function sharedLayout() {
     for (var i = 0; i < document.getElementsByTagName("div").length; i++) {
         var elmnt = document.getElementsByTagName("div")[i];
@@ -114,26 +121,26 @@ window.onload = function sharedLayout() {
     }
 };
 
+//PORTFOLIO : BOOK
 function flipbook(flip) {
-    var flipbook = document.getElementById("flipbook");
-    var flipbookpage = document.getElementById("flipbookpage");
-    if ((flipbookpage.textContent == 1 && flip == -1) || (flipbookpage.textContent == 12 && flip == 1)) flip = 0;
-    flipbook.src = "image/Magazine-NE/p" + (Number(flipbookpage.textContent) + flip) + ".jpg";
-    flipbookpage.textContent = Number(flipbookpage.textContent) + flip;
+    if ((ID("flipbookpage").textContent == 1 && flip == -1) || (ID("flipbookpage").textContent == 12 && flip == 1)) flip = 0;
+    ID("flipbook").src = "image/Magazine-NE/p" + (Number(ID("flipbookpage").textContent) + flip) + ".jpg";
+    ID("flipbookpage").textContent = Number(ID("flipbookpage").textContent) + flip;
 }
 
-if (document.getElementById("portfolio") != null) {
-    for (var i = 0; i < document.getElementById("portfolio").childElementCount; i++) {
+//PORTFOLIO : BOOK
+if (ID("portfolio") != null) {
+    for (var i = 0; i < ID("portfolio").childElementCount; i++) {
         (function(index){
-            document.getElementById("portheadingbuttons").children[i].addEventListener("click", function(){
-                for (var j = 0; j < document.getElementById("portfolio").childElementCount; j++) {
+            ID("portheadingbuttons").children[i].addEventListener("click", function(){
+                for (var j = 0; j < ID("portfolio").childElementCount; j++) {
                     if (index == j) {
-                        document.getElementById("portfolio").children[j].style.display = "block";
-                        document.getElementById("portheadingbuttons").children[j].classList.add("clicked");
+                        ID("portfolio").children[j].style.display = "block";
+                        ID("portheadingbuttons").children[j].classList.add("clicked");
                     }
                     else {
-                        document.getElementById("portfolio").children[j].style.display = "none";
-                        document.getElementById("portheadingbuttons").children[j].classList.remove("clicked");
+                        ID("portfolio").children[j].style.display = "none";
+                        ID("portheadingbuttons").children[j].classList.remove("clicked");
                     }
                 }
             });
@@ -141,8 +148,9 @@ if (document.getElementById("portfolio") != null) {
     }
 }
 
+//Scroll to top of the page
 window.scroll({
-    top: 0, //use when scroll up''
+    top: 0,
     left: 0, 
     behavior: 'smooth' 
 });
