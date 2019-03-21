@@ -11,15 +11,15 @@ document.documentElement.addEventListener("keyup", function(event) {
         }
     }
     if (event.keyCode === 48) {
-        elem = document.getElementById("game-resp-container");
-        if (elem.requestFullscreen) {
-            elem.requestFullscreen();
-        } else if (elem.mozRequestFullScreen) { /* Firefox */
-            elem.mozRequestFullScreen();
-        } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-            elem.webkitRequestFullscreen();
-        } else if (elem.msRequestFullscreen) { /* IE/Edge */
-            elem.msRequestFullscreen();
+        game = document.getElementById("gameContainer");
+        if (game.requestFullscreen) {
+            game.requestFullscreen();
+        } else if (game.mozRequestFullScreen) { /* Firefox */
+            game.mozRequestFullScreen();
+        } else if (game.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+            game.webkitRequestFullscreen();
+        } else if (game.msRequestFullscreen) { /* IE/Edge */
+            game.msRequestFullscreen();
         }
     }
 });
