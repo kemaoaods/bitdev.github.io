@@ -1,6 +1,6 @@
 ﻿var isLocked = true;
 function noscroll() {
-    if (isLocked === true) { 
+    if (isLocked) {
         window.scrollTo(0, 0);
         document.documentElement.style.overflow = "hidden";
     }
@@ -9,7 +9,6 @@ function noscroll() {
         ID('navbar').style.display = "block";
         document.documentElement.style.overflow = "auto";
         ID("@port").removeAttribute("style");
-        ID("@port").style.maxWidth = "1400px";
     }
 }
 noscroll();
@@ -25,7 +24,6 @@ function Password() {
         ID('navbar').style.display = "block";
         document.documentElement.style.overflow = "auto";
         ID("@port").removeAttribute("style");
-        ID("@port").style.maxWidth = "1400px";
     }
     else {
         if ( ID('modal-content').classList.contains("shakesideplay")) ID('modal-content').classList.remove("shakesideplay");

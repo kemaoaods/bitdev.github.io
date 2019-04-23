@@ -44,7 +44,7 @@ document.documentElement.addEventListener("keyup", function(event) {
 });
 
 var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
+/*window.onscroll = */function ScrollingBar() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         ID("navbar").style.top = "0";

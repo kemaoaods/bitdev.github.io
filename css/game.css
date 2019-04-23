@@ -24,3 +24,32 @@ header span {
     height: 100%;
     background-color: black;
 }
+
+.gamenav {
+    margin: 0 auto;
+    width:100px;
+}
+
+.nav-left {
+    padding: 8px;
+    background-color:#EAEDED;
+    border-radius: 0px 0px 0px 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-right {
+    padding: 8px;
+    background-color:#EAEDED;
+    border-radius: 0px 0px 6px 0px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-left:hover {
+    background-color:#BEBEBE;
+}
+
+.nav-right:hover {
+    background-color:#BEBEBE;
+}

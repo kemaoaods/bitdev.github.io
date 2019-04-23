@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Dev Khem | Synonym Ball</title>
+    <title>KhemDev - Synonym Ball</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -21,10 +21,22 @@
         <div id="game-resp-container">
             <div id="gameContainer"></div>
         </div>
-        <li><span>Press "0"</span> to Play in Fullscreen, <span>Press "9"</span> to Enable/Disable Navigation Bar</li>
+        <div class="gamenav">
+            <div class="w3-half">
+                <div id="fullscreen" class="nav-left">
+                    <i class="fa fa-expand fa-fw w3-large"></i>
+                </div>
+            </div>
+            <div id="navbarcontroller" class="w3-half">
+                <div class="nav-right">
+                    <i class="fa fa-compass fa-fw w3-large"></i>
+                </div>
+            </div>
+        </div>
+        <div class="w3-container"></div>
     </header>
     
-    <div class="w3-content w3-padding-large w3-margin-top">
+    <div class="w3-margin-top fixedscale">
         <div class="innercontent">
             <div class="w3-quarter" style="font-weight:bold">
                 <li>Game</li><br>
@@ -37,7 +49,7 @@
                 <li>Platform(s)</li>
                 <li>Publish Date</li>
                 <li>Mode</li>
-                <li>Version</li>
+                <li>Current Version</li>
             </div>
             <div class="w3-threequarter">
                 <li>Synonym Ball,</li>
@@ -52,17 +64,19 @@
                 <li>Web Browsers (Ideal: Google Chrome)</li>
                 <li>13 September 2018</li>
                 <li>Single Player</li>
-                <li>1.0</li>
+                <li>1.0.2 (Tue 23.04.19)</li>
             </div>
             <div class="w3-container"></div>
         </div>
     </div>
 
-    <div id="navbar" style="display:none;">
-        <a class="text" href="../index.html"><img src="../image/mylogo1.ico" style="max-width:20px;transform:scale(1.5);"/></a>
-        <a class="text" href="../about.html"><b>About</b></a>
-        <a class="text" href="../portfolio.html"><b>Portfolio</b></a>
-        <a class="text" href="../project.html"><b>My Projects</b></a>
+    <div id="navbar">
+        <div class="fixedscale">
+            <a class="logo" href="index.html"><img src="image/mylogo1.ico" style="max-width:20px;transform:scale(2);"/></a>
+            <a class="text bold" href="profile_th.html">Profile</a>
+            <a class="text bold" href="projects.html">My Projects</a>
+            <a class="text bold" href="applications.html">My Applications</a>
+        </div>
     </div>
     
     <div style="background-color:#333;color:white;" class="w3-center w3-padding-24">
