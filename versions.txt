@@ -7,3 +7,6 @@ Build 190423 (Tue. 23 April 2019)
 - New layout.
 Build U0A001 (Fri. 10 May 2019)
 - Minor Profile (TH) update.
+Build R0S001 (Mon. 20 May 2019)
+- Footer Update.
+- Add Application page and data.

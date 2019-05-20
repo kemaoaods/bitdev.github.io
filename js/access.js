@@ -6,7 +6,6 @@ function noscroll() {
     }
     else {
         ID('modal').style.display = "none";
-        ID('navbar').style.display = "block";
         document.documentElement.style.overflow = "auto";
         ID("@port").removeAttribute("style");
     }
@@ -21,7 +20,6 @@ ID("access").addEventListener("keyup", function(event) {
 function Password() {
     if (ID("access").value === "48826") {
         ID('modal').style.display = "none";
-        ID('navbar').style.display = "block";
         document.documentElement.style.overflow = "auto";
         ID("@port").removeAttribute("style");
     }

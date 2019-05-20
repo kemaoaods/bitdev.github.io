@@ -58,7 +58,8 @@ var prevScrollpos = window.pageYOffset;
     //ID("navbar").style.top = "-60px"
 }
 
-function Searching() {
+//Searching for projects page.
+function SearchingPorj() {
     var input, list, count;
     input = ID("search");
     list = ID("document").getElementsByTagName("h6");
@@ -71,14 +72,28 @@ function Searching() {
             count--;
         }
     }
-    if (count == 0) {
-        ID("emptyresult").style.display = "block";
-        ID("storedlist").style.display = "none";
+
+    ID("emptyresult").style.display = (count == 0) ? "block" : "none";
+    ID("storedlist").style.display = (count == 0) ? "none" : "block";
+}
+
+//Searching for application page.
+function SearchingApp() {
+    var input, list, count;
+    input = ID("search");
+    list = ID("document").getElementsByClassName("item");
+    count = list.length;
+    for (var i = 0; i < list.length; i++) {
+        if (list[i].children[0].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
+            list[i].children[0].parentElement.style.display = "block";
+        } else {
+            list[i].children[0].parentElement.style.display = "none";
+            count--;
+        }
     }
-    else {
-        ID("emptyresult").style.display = "none";
-        ID("storedlist").style.display = "block";
-    }
+
+    ID("emptyresult").style.display = (count == 0) ? "block" : "none";
+    ID("storedlist").style.display = (count == 0) ? "none" : "block";
 }
 
 var focusablephoto = document.getElementsByClassName("photoplace");
@@ -100,7 +115,7 @@ window.onclick = function(event) {
 }
 
 //CONNECTED PAGE
-window.onload = function sharedLayout() {
+function sharedLayout() {
     for (var i = 0; i < document.getElementsByTagName("div").length; i++) {
         var elmnt = document.getElementsByTagName("div")[i];
         var file = elmnt.getAttribute("layout");
@@ -119,7 +134,8 @@ window.onload = function sharedLayout() {
             return;
         }
     }
-};
+}
+sharedLayout();
 
 //PORTFOLIO : BOOK
 function flipbook(flip) {
