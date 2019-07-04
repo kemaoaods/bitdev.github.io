@@ -1,13 +1,10 @@
-﻿//Shorten function
-function ID(id) {
-    return document.getElementById(id);
-}
+﻿const ID = (id) => document.getElementById(id);
+const CL = (cl) => document.getElementsByClassName(cl);
+const TN = (tn) => document.getElementsByTagName(tn);
 
 //SWITCHING TEXTS ON MENU
 var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
-if (ID("role") != null) {
-    AnimatedText(a, 4000, 20, true);
-}
+if (ID("role") != null) AnimatedText(a, 4000, 20, true);
 
 function AnimatedText(texts, changeInterval, updateInterval, onTextChanged) {
     var currentText = parseInt(Math.random() * texts.length);
@@ -36,12 +33,6 @@ AnimatedText.prototype = {
         clearInterval(this.t1); clearInterval(this.t2); 
     }
 }
-
-// PRESS '`' to reload
-document.documentElement.addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === "Backquote") location.reload();
-});
 
 var prevScrollpos = window.pageYOffset;
 /*window.onscroll = */function ScrollingBar() {
@@ -96,10 +87,9 @@ function SearchingApp() {
     ID("storedlist").style.display = (count == 0) ? "none" : "block";
 }
 
-var focusablephoto = document.getElementsByClassName("photoplace");
-for (var i = 0; i < focusablephoto.length; i++) {
-    for (var j = 0; j < focusablephoto[i].getElementsByTagName("img").length; j++) {
-            focusablephoto[i].getElementsByTagName("img")[j].addEventListener("click", function(){
+for (var i = 0; i < CL("photoplace").length; i++) {
+    for (var j = 0; j < CL("photoplace")[i].getElementsByTagName("img").length; j++) {
+        CL("photoplace")[i].getElementsByTagName("img")[j].addEventListener("click", function(){
             ID("focusimg").src = this.src;
             ID("photomodal").style.display = "block";
             //ID("caption").innerHTML = element.alt;
@@ -116,8 +106,8 @@ window.onclick = function(event) {
 
 //CONNECTED PAGE
 function sharedLayout() {
-    for (var i = 0; i < document.getElementsByTagName("div").length; i++) {
-        var elmnt = document.getElementsByTagName("div")[i];
+    for (var i = 0; i < TN("div").length; i++) {
+        var elmnt = TN("div")[i];
         var file = elmnt.getAttribute("layout");
         if (file) {
             var xhttp = new XMLHttpRequest();

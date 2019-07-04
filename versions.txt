@@ -10,3 +10,7 @@ Build U0A001 (Fri. 10 May 2019)
 Build R0S001 (Mon. 20 May 2019)
 - Footer Update.
 - Add Application page and data.
+Build R0S002 (Thu. 4 July 2019)
+- Support for the new like "apskhem" replaced "kemaoaods".
+- More optimized
+- Redesign Projects Page.

@@ -1,14 +1,9 @@
 header {
     width: 85%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     margin-top: 60px;
 }
-header span {
-    font-weight: bold;
-}
+
 #game-resp-container {
     position: relative;
     overflow: hidden;
@@ -16,7 +11,8 @@ header span {
     box-shadow: 0px 0px 15px rgba(0,0,0,0.2);
     border-radius: 8px;
 }
-#game-resp-container > #gameContainer {
+
+#gameContainer {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,29 +23,31 @@ header span {
 
 .gamenav {
     margin: 0 auto;
-    width:100px;
+    width: 100px;
+    border-radius: 0px 0px 6px 6px;
+}
+
+.grid_half {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+}
+
+.nav-left, .nav-right {
+    padding: 8px;
+    background-color:#EAEDED;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
 .nav-left {
-    padding: 8px;
-    background-color:#EAEDED;
     border-radius: 0px 0px 0px 6px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .nav-right {
-    padding: 8px;
-    background-color:#EAEDED;
     border-radius: 0px 0px 6px 0px;
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.nav-left:hover {
-    background-color:#BEBEBE;
-}
-
-.nav-right:hover {
+.nav-left:hover, .nav-right:hover {
     background-color:#BEBEBE;
 }

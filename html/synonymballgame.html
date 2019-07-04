@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/x-icon" href="../image/mylogo1.ico"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <script src="SynonymBall_Build/UnityLoader.js"></script>
+    <!-- <script src="SynonymBall_Build/UnityLoader.js"></script> -->
     <script>
-        var gameInstance = UnityLoader.instantiate("gameContainer", "SynonymBall_Build/Synomym Ball.json");
+        //var gameInstance = UnityLoader.instantiate("gameContainer", "SynonymBall_Build/Synomym Ball.json");
     </script>
 </head>
 <body>
@@ -21,19 +21,14 @@
         <div id="game-resp-container">
             <div id="gameContainer"></div>
         </div>
-        <div class="gamenav">
-            <div class="w3-half">
-                <div id="fullscreen" class="nav-left">
-                    <i class="fa fa-expand fa-fw w3-large"></i>
-                </div>
+        <div class="gamenav grid_half">
+            <div id="fullscreen" class="nav-left">
+                <i class="fa fa-expand fa-fw w3-large"></i>
             </div>
-            <div id="navbarcontroller" class="w3-half">
-                <div class="nav-right">
-                    <i class="fa fa-compass fa-fw w3-large"></i>
-                </div>
+            <div id="navbarcontroller" class="nav-right">
+                <i class="fa fa-compass fa-fw w3-large"></i>
             </div>
         </div>
-        <div class="w3-container"></div>
     </header>
     
     <div class="w3-margin-top fixedscale">
@@ -70,28 +65,8 @@
         </div>
     </div>
 
-    <div id="navbar">
-        <div class="fixedscale">
-            <a class="logo" href="index.html"><img src="image/mylogo1.ico" style="max-width:20px;transform:scale(2);"/></a>
-            <a class="text bold" href="profile_th.html">Profile</a>
-            <a class="text bold" href="projects.html">My Projects</a>
-            <a class="text bold" href="applications.html">My Applications</a>
-        </div>
-    </div>
-    
-    <div style="background-color:#333;color:white;" class="w3-center w3-padding-24">
-        <div>
-            <a href="https://www.facebook.com/aps.khem" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-            <a href="https://www.instagram.com/apskhem" target="_blank"><i class="fa fa-instagram w3-hover-opacity"></i></a>
-            <a href="https://www.pinterest.com/apisit_lon/" target="_blank"><i class="fa fa-pinterest-p w3-hover-opacity"></i></a>
-            <a href="https://steamcommunity.com/profiles/76561198126589193/" target="_blank"><i class="fa fa-steam w3-hover-opacity"></i></a>
-            <a href="https://www.youtube.com/CyberRecordChannel" target="_blank"><i class="fa fa-youtube w3-hover-opacity"></i></a>
-            <a href="http://line.me/ti/p/~khemzakung" target="_blank"><img src="../image/line-512.png" style="width:15px" class="w3-hover-opacity"/></a>
-            <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><i class="fa fa-google-plus w3-hover-opacity"></i></a>
-            <div class="tooltip"><i class="fa fa-envelope w3-hover-opacity"></i><span class="tooltiptext">cyber1.record@gmail.com<br>apisit_lon@hotmail.com</span></div>
-        </div>
-        <a href="../index.html">HOME</a> | <a href="../portfolio.html">PORTFOIO</a> | <a href="../project.html">PROJECT</a><br>&copy 2018 kemaoaods.github.io All Rights Reserved.
-    </div>
+    <div layout="../layout/navbar.html"></div>
+    <div layout="../layout/footer.html"></div>
 
     <script src="../js/gamecontroller.js"></script>
 </body>
