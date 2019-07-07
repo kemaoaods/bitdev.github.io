@@ -396,7 +396,7 @@ input[id=search]:focus {
     margin-top: 8px;
     display: grid;
     grid-gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
 }
 

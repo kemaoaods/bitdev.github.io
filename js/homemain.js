@@ -2,7 +2,7 @@
 const CL = (cl) => document.getElementsByClassName(cl);
 const TN = (tn) => document.getElementsByTagName(tn);
 
-//SWITCHING TEXTS ON MENU
+// switching text on the home page
 var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
 if (ID("role") != null) AnimatedText(a, 4000, 20, true);
 
@@ -34,8 +34,9 @@ AnimatedText.prototype = {
     }
 }
 
-var prevScrollpos = window.pageYOffset;
-/*window.onscroll = */function ScrollingBar() {
+// navbar function scrolling down to hide else to show
+/* var prevScrollpos = window.pageYOffset;
+window.onscroll = function ScrollingBar() {
     var currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         ID("navbar").style.top = "0";
@@ -47,7 +48,7 @@ var prevScrollpos = window.pageYOffset;
     //ID('workexperience').offsetTop)
     //document.documentElement.scrollTop
     //ID("navbar").style.top = "-60px"
-}
+} */
 
 //Searching for projects page.
 function SearchingPorj() {
@@ -87,6 +88,7 @@ function SearchingApp() {
     ID("storedlist").style.display = (count == 0) ? "none" : "block";
 }
 
+// showing bigger photo when clicking on the photo target.
 for (var i = 0; i < CL("photoplace").length; i++) {
     for (var j = 0; j < CL("photoplace")[i].getElementsByTagName("img").length; j++) {
         CL("photoplace")[i].getElementsByTagName("img")[j].addEventListener("click", function(){
@@ -97,14 +99,12 @@ for (var i = 0; i < CL("photoplace").length; i++) {
     }
 }
 
-//close photomodal element id
+// close clicked photo when clicked outside the photo (photomodal)
 window.onclick = function(event) {
-    if (event.target == photomodal) {
-        photomodal.style.display = "none";
-    }
+    if (event.target == photomodal) photomodal.style.display = "none";
 }
 
-//CONNECTED PAGE
+// connent page layout for reducing html code
 function sharedLayout() {
     for (var i = 0; i < TN("div").length; i++) {
         var elmnt = TN("div")[i];
@@ -127,14 +127,14 @@ function sharedLayout() {
 }
 sharedLayout();
 
-//PORTFOLIO : BOOK
+// PROFILE : fliping the e-book (not completed)
 function flipbook(flip) {
     if ((ID("flipbookpage").textContent == 1 && flip == -1) || (ID("flipbookpage").textContent == 12 && flip == 1)) flip = 0;
     ID("flipbook").src = "image/Magazine-NE/p" + (Number(ID("flipbookpage").textContent) + flip) + ".jpg";
     ID("flipbookpage").textContent = Number(ID("flipbookpage").textContent) + flip;
 }
 
-//PORTFOLIO : BOOK
+// PROFILE : BOOK
 if (ID("portfolio") != null) {
     for (var i = 0; i < ID("portfolio").childElementCount; i++) {
         (function(index){
@@ -154,7 +154,7 @@ if (ID("portfolio") != null) {
     }
 }
 
-//Scroll to top of the page
+// Scroll to top of the page
 window.scroll({
     top: 0,
     left: 0, 

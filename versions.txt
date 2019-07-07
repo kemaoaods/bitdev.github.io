@@ -14,3 +14,5 @@ Build R0S002 (Thu. 4 July 2019)
 - Support for the new like "apskhem" replaced "kemaoaods".
 - More optimized
 - Redesign Projects Page.
+Build R0S002 (Sun. 7 July 2019)
+- Minor fixes.
