@@ -25,14 +25,17 @@ input:focus, button:focus {
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
 #portheadingbuttons .fa,
+.w3-third i,
 #profile .fa,
+#profile .fas,
 #education .fa,
+#education .fab,
 #educationaldisplay .fa,
 #activities .fa,
 #works .fa,
 #awards .fa,
 #workexperience .fa {
-    margin-right: 12px;
+    margin-right: 8px;
 }
 
 /* Normal Contents */
@@ -70,7 +73,9 @@ footer {
     text-align: center;
 }
 
-footer i:hover {
+footer i:hover,
+#footbar {
+    cursor: pointer;
     opacity: 0.5;
 }
 
