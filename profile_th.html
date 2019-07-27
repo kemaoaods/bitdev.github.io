@@ -15,11 +15,11 @@
     <!-- Access to Page -->
     <div id="modal">
         <div id="modal-content">
-            <h3 style="margin-bottom:20px"><b>The page is privated by the owner</b></h3>
+            <h3 style="margin-bottom:20px" class="bold">Correct the password to access the page</h3>
             <input style="transition:0.3s;" id="access" type="password" placeholder="Enter password to access" name="psw" required>
-            <div>
-                <button style="width:80%;" id="accessBtn" onclick="Password()">Confirm</button>
-                <button style="width:18%;" onclick="javascript:location.href='index.html'"><i style="transform: scale(1.5)" class="fa fa-home"></i></button>
+            <div class="grid-half">
+                <button id="accessBtn" onclick="Password()">Confirm</button>
+                <button onclick="javascript:location.href='index.html'">Go to Homepage</button>
             </div>
         </div>
     </div>
@@ -84,14 +84,17 @@
                     <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card w3-xxlarge w3-text-indigo"></i><b>ข้อมูลทั่วไป</b></h2>
                     <div class="w3-third">
                         <div class="w3-container w3-indigo w3-margin-bottom w3-padding-16 w3-round">
-                            <li style="color:white;">ชื่อ-สกุล: อภิสิทธิ์ ฤทธิ์เรืองโรจน์<br>ชื่อเล่น: เข้ม</li>
-                            <li style="color:white;">วันเกิด:   <i class="fa fa-calendar fa-fw"></i>   อา. 10 กันยายน พ.ศ. 2543</li>
-                            <li style="color:white;">อายุ: 18<br>เชื้อชาติ: ไทย<br>สัญชาติ: ไทย<br>ศาสนา: (ฆราวาสนิยม)<br>หมู่เลือด: AB<br>ส่วนสูง: 172 ซม.<br>น้ำหนัก: 54 กก.</li>
-                        </div>
-                        <div class="w3-container w3-indigo w3-margin-bottom w3-padding-16 w3-round">
-                            <li style="color:white;"><span style="color:#FFE2A8">กำลังศึกษาในระดับชั้น:</span><br>มัธยมศึกษาปีที่ 6 ปีการศึกษา 2651</li>
-                            <li style="color:white;"><span style="color:#FFE2A8">แผนการเรียน:</span><br>วิทยาศาสตร์-คณิตศาสตร์</li>
-                            <li style="color:white;"><span style="color:#FFE2A8">โครงการ:</span><br>พัฒนาและส่งเสริมผู้มีความสามารถพิเศษทางวิทยาศาสตร์และเทคโนโลยีภาคสมทบ (พสวท.สมทบ)</li>
+                            <li style="color:white;">ชื่อ-สกุล: อภิสิทธิ์ ฤทธิ์เรืองโรจน์<br>
+                                ชื่อเล่น: เข้ม<br>
+                                วันเกิด: อา. 10 กันยายน พ.ศ. 2543<br>
+                                อายุ: 18<br>
+                                เชื้อชาติ: ไทย<br>
+                                สัญชาติ: ไทย<br>
+                                ศาสนา: (ฆราวาสนิยม)<br>
+                                หมู่เลือด: AB<br>
+                                ส่วนสูง: 172 ซม.<br>
+                                น้ำหนัก: 54 กก.
+                            </li>
                         </div>
                     </div>
 

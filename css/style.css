@@ -504,3 +504,10 @@ input[id=search]:focus {
 .project-content > a > img:hover {
     opacity: 0.6;
 }
+
+.grid-half {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+}

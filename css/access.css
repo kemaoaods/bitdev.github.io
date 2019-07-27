@@ -18,10 +18,11 @@ button {
     background-color: #4054b2;
     border-radius: 4px;
     color: white;
-    padding: 14px 20px;
+    padding: 8px 20px;
     margin: 8px 0;
     cursor: pointer;
     transition: 0.3s;
+    border-radius: 50px;
 }
 
 /* The Modal (background) */
@@ -44,6 +45,7 @@ button {
     margin: 20% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
     max-width: 600px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
 }
 
 .shakesideplay {
