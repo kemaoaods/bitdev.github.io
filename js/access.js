@@ -1,4 +1,4 @@
-﻿var isLocked = true;
+﻿var isLocked = false;
 function noscroll() {
     if (isLocked) {
         window.scrollTo(0, 0);
