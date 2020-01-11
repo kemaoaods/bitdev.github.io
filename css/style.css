@@ -1,9 +1,17 @@
 ﻿html, body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Bai Jamjuree', sans-serif;
+    font-family: 'Sarabun', sans-serif;
 }
 
 a {
     text-decoration: none
+}
+
+* :not(input) {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 li {
@@ -23,28 +31,13 @@ input:focus, button:focus {
     outline: none;
 }
 
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-#portheadingbuttons .fa,
-.w3-third i,
-#profile .fa,
-#profile .fas,
-#education .fa,
-#education .fab,
-#educationaldisplay .fa,
-#activities .fa,
-#works .fa,
-#awards .fa,
-#workexperience .fa {
-    margin-right: 8px;
-}
-
 /* Normal Contents */
 /* //----------------------------------------------------------------------------------------------------------------------------// */
 header {
     text-align: center;
 }
 
-header h1 {
+#head-text {
     font-weight: bold;
     font-size: 48px;
     background: linear-gradient(to right, #3AFFAE, #3AD5FF , #4054b2);
@@ -52,7 +45,7 @@ header h1 {
     -webkit-text-fill-color: transparent;
 }
 
-header .w3-display-middle {
+#head-text-frame {
     border-radius: 6px;
     background-color: rgba(0,0,0,0.4);
     color: white;
@@ -287,6 +280,7 @@ footer i:hover,
 .showcase {
     width: 100%;
     border-radius: 6px;
+    cursor: pointer;
     transition: 0.3s;
 }
 
@@ -302,28 +296,6 @@ footer i:hover,
 
 .headlink:hover {
     opacity: 0.8;
-}
-
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-.row {
-    display: -ms-flexbox; /* IE10 */
-    display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
-    flex-wrap: wrap;
-    padding: 0 4px;
-}
-
-/* Create four equal columns that sits next to each other */
-.column {
-    -ms-flex: 33%; /* IE10 */
-    flex: 33%;
-    max-width: 33%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -347,13 +319,13 @@ footer i:hover,
 /* //----------------------------------------------------------------------------------------------------------------------------// */
 #social-grid {
     display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
+    grid-gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
 }
 
 #social-grid img {
-    border-radius: 6px;
+    border-radius: 50%;
     transition: 0.3s;
 }
 
@@ -410,24 +382,6 @@ input[id=search]:focus {
     grid-gap: 8px;
     grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
-}
-
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-#portheadingbuttons a {
-    display: inline-table;
-    width: 100%;
-    text-align: left;
-    padding: 8px;
-}
-
-#portheadingbuttons a:hover {
-    cursor: pointer;
-    background-color: gainsboro;
-}
-
-#portheadingbuttons .clicked {
-    pointer-events: none;
-    background-color: gainsboro;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
@@ -509,5 +463,12 @@ input[id=search]:focus {
     display: grid;
     grid-gap: 8px;
     grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+}
+
+.grid-third {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     grid-template-rows: repeat(auto-fit, auto);
 }

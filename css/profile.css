@@ -1,0 +1,78 @@
+.sub-heading-text {
+    font-size: large;
+    font-weight: bold;
+}
+
+.list-grid {
+    display: grid;
+    grid-gap: 0 8px;
+    grid-template-columns: 60px minmax(80px, 1fr);
+    grid-template-rows: repeat(auto-fit, auto);
+}
+
+/* identifier css block */
+#name-block {
+    color: white;
+    background-color: #4054b2;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+/* profile-headings */
+#profile-headings a {
+    display: inline-table;
+    width: 100%;
+    padding: 8px;
+}
+
+#profile-headings a:hover {
+    cursor: pointer;
+    background-color: gainsboro;
+}
+
+#profile-headings .selected-profile-heading {
+    pointer-events: none;
+    background-color: gainsboro;
+    color: #4054b2;
+}
+
+#profile-headings i,
+.innercontent i {
+    margin-right: 8px;
+}
+
+/* grids */
+.half-grid {
+    display: grid;
+    grid-gap: 0 8px;
+    grid-template-columns: repeat(auto-fit, minmax(48%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+}
+
+.quad-grid {
+    display: grid;
+    grid-gap: 0 8px;
+    grid-template-columns: repeat(auto-fit, minmax(23%, 1fr));
+    grid-template-rows: repeat(auto-fit, auto);
+}
+
+.bar-left {
+    text-align: left;
+    background-color: white;
+    color: white;
+    border-radius: 20px;
+    font-size: small;
+    margin-bottom: 4px;
+}
+
+.bar-left > div {
+    padding-left: 16px;
+    background-color: #4054b2;
+    border-radius: 20px;
+}
+
+.content-border {
+    border: 2px solid lightgray;
+    border-radius: 16px;
+    padding: 12px;
+}

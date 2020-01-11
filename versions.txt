@@ -16,3 +16,5 @@ Build R0S002 (Thu. 4 July 2019)
 - Redesign Projects Page.
 Build R0S003 (Sun. 7 July 2019)
 - Minor fixes.
+Build R0S004 (Fri. 11 January 2020)
+- Minor fixes.

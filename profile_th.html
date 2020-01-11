@@ -1,35 +1,23 @@
 ﻿<!DOCTYPE html>
-<html lang="th" style="overflow:hidden;">
+<html lang="th">
 <head>
     <title>KhemDev - Profile (TH)</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/access.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bai+Jamjuree">
+    <link rel="stylesheet" type="text/css" href="css/profile.css">
+    <link href="https://fonts.googleapis.com/css?family=Sarabun&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="image/mylogo1.ico"/>
 </head>
 <body>
-    <!-- Access to Page -->
-    <div id="modal">
-        <div id="modal-content">
-            <h3 style="margin-bottom:20px" class="bold">Correct the password to access the page</h3>
-            <input style="transition:0.3s;" id="access" type="password" placeholder="Enter password to access" name="psw" required>
-            <div class="grid-half">
-                <button id="accessBtn" onclick="Password()">Confirm</button>
-                <button onclick="javascript:location.href='index.html'">Go to Homepage</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Photo Modal zoom photo showcase -->
     <div id="photomodal" class="w3-center" onclick="close(this)" style="display:none;">
         <img id="focusimg" class="animate" src=""/>
     </div>
 
-    <div id="@port" class="w3-content _profilelayout" style="filter:blur(8px);-webkit-filter:blur(8px);">
+    <main class="w3-content _profilelayout">
         <!-- The Grid -->
         <div class="w3-row-padding w3-margin-top">
             <!-- Left Column -->
@@ -41,8 +29,9 @@
                     </span>
                 </h1>
 
-                <div id="portheadingbuttons">
-                    <a class="clicked"><i class="fa fa-address-card fa-fw"></i>ข้อมูลทั่วไป</a>
+                <div id="profile-headings">
+                    <a class="selected-profile-heading"><i class="fa fa-address-card fa-fw"></i>ข้อมูลทั่วไป</a>
+                    <a><i class="fa fa-cogs fa-fw"></i>ความสามารถ</a>
                     <a><i class="fa fa-graduation-cap fa-fw"></i>การศึกษา</a>
                     <a><i class="fas fa-file-signature"></i>ระเบียนแสดงผลการศึกษา</a>
                     <a><i class="fas fa-hiking"></i>กิจกรรมวิชาการ</a>
@@ -70,10 +59,10 @@
 
                     <div class="w3-left w3-container" style="font-size:2em;font-weight:bold">นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</div>
                     <div class="w3-container">
-                        <p><i class="fa fa-briefcase fa-fw w3-large w3-text-indigo"></i>นักเรียนที่โรงเรียนยุพราชวิทยาลับ</p>
-                        <p><i class="fa fa-home fa-fw w3-large w3-text-indigo"></i>331 หมู่ 6 ต.ป่าไผ่ อ.สันทราย จ.เชียงใหม่ 50210</p>
-                        <p><i class="fa fa-envelope fa-fw w3-large w3-text-indigo"></i>apisit_lon@hotmail.com, cyber1.record@gmail.com</p>
-                        <p><i class="fas fa-phone-square-alt fa-fw w3-large w3-text-indigo"></i>082-1866840</p>
+                        <li><i class="fa fa-briefcase fa-fw w3-large w3-text-indigo"></i>นักศึกษาที่มหาวิทยาลัยเชียงใหม่</li>
+                        <li><i class="fa fa-home fa-fw w3-large w3-text-indigo"></i>331 หมู่ 6 ต.ป่าไผ่ อ.สันทราย จ.เชียงใหม่ 50210</li>
+                        <li><i class="fa fa-envelope fa-fw w3-large w3-text-indigo"></i>apisit_lon@hotmail.com, cyber1.record@gmail.com</li>
+                        <li><i class="fas fa-phone-square-alt fa-fw w3-large w3-text-indigo"></i>082-1866840</li>
                     </div>
                 </div>
             </div>
@@ -81,137 +70,197 @@
             <!-- Right Column -->
             <div id="portfolio" class="w3-twothird w3-margin-top">
                 <div id="profile" class="innercontent">
-                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card w3-xxlarge w3-text-indigo"></i><b>ข้อมูลทั่วไป</b></h2>
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-cogs w3-xxlarge w3-text-indigo"></i><b>ข้อมูลทั่วไป</b></h2>
                     <div class="w3-third">
-                        <div class="w3-container w3-indigo w3-margin-bottom w3-padding-16 w3-round">
-                            <li style="color:white;">ชื่อ-สกุล: อภิสิทธิ์ ฤทธิ์เรืองโรจน์<br>
-                                ชื่อเล่น: เข้ม<br>
-                                วันเกิด: อา. 10 กันยายน พ.ศ. 2543<br>
-                                อายุ: 18<br>
-                                เชื้อชาติ: ไทย<br>
-                                สัญชาติ: ไทย<br>
-                                ศาสนา: (ฆราวาสนิยม)<br>
-                                หมู่เลือด: AB<br>
-                                ส่วนสูง: 172 ซม.<br>
-                                น้ำหนัก: 54 กก.
-                            </li>
+                        <div class="list-grid" id="name-block">
+                            <div>
+                                <li>ชื่อ-สกุล:</li>
+                                <li>ชื่อเล่น:</li>
+                                <li>วันเกิด:</li>
+                                <li>อายุ:</li>
+                                <li>เชื้อชาติ:</li>
+                                <li>สัญชาติ:</li>
+                                <li>ศาสนา:</li>
+                                <li>หมู่เลือด:</li>
+                                <li>ส่วนสูง:</li>
+                                <li>น้ำหนัก:</li>
+                            </div>
+                            <div>
+                                <li>อภิสิทธิ์ ฤทธิ์เรืองโรจน์</li>
+                                <li>เข้ม</li>
+                                <li>อา. 10 กันยายน พ.ศ. 2543</li>
+                                <li id="dynamic-age"></li>
+                                <li>ไทย</li>
+                                <li>ไทย</li>
+                                <li>ฆราวาสนิยม</li>
+                                <li>AB</li>
+                                <li>166 ซม.</li>
+                                <li>54 กก.</li>
+                            </div>
                         </div>
                     </div>
 
                     <div class="w3-twothird" style="padding-left:24px;">
                         <h5 class="w3-opacity"><i class="fa fa-users fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">ครอบครัว</b></h5>
-                        <li>บิดา: นายดำเนิน ฤทธิ์เรืองโรจน์</li>
-                        <li>อาชีพ: ค้าขาย</li>
-                        <li style="color: black;">มารดา: นางบุญต้อม ฤทธิ์เรืองโรจน์</li>
-                        <li style="color: black;">อาชีพ: พนักงานบริษัท</li>
-                        <li style="color: black;">จำนวนพี่น้อง: 0 (เป็นลูกคนเดียว)</li><br>
+                        <div class="list-grid">
+                            <div>
+                                <li>บิดา:</li>
+                                <li>อาชีพ:</li>
+                                <li>มารดา:</li>
+                                <li>อาชีพ:</li>
+                                <li>พี่น้อง:</li>
+                            </div>
+                            <div>
+                                <li>นายดำเนิน ฤทธิ์เรืองโรจน์</li>
+                                <li>ค้าขาย</li>
+                                <li>นางบุญต้อม ฤทธิ์เรืองโรจน์</li>
+                                <li>พนักงานบริษัท</li>
+                                <li>0 (เป็นลูกคนเดียว)</li>
+                            </div>
+                        </div>
 
-                        <h5 class="w3-opacity"><i class="fa fa-home fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">ที่อยู่อาศัย (ตามทะเบียนบ้าน, ปัจจุบัน)</b></h5>
+                        <h5 class="w3-opacity"><i class="fa fa-home fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">ที่อยู่อาศัย (ตามทะเบียนบ้าน)</b></h5>
                         <li style="color: black;">331 หมู่ 6 ต.ป่าไผ่ อ.สันทราย จ.เชียงใหม่ 50210</li><br>
 
                         <h5 class="w3-opacity"><i class="fa fa-envelope fa-fw w3-large w3-opacity"></i><b style="margin-left:4px">อีเมลล์และโทรศัพท์</b></h5>
-                        <li style="color:black;">Email: apisit_lon@hotmail.com, cyber1.record@gmail.com<br>Tel: 082-1866840</li><br>
+                        <div class="list-grid">
+                            <li>อีเมลล์:</li>
+                            <li>apisit_lon@hotmail.com,<br>cyber1.record@gmail.com</li>
+                            <li>เบอร์โทร:</li>
+                            <li>082-1866840</li>
+                        </div>
                     </div>
                     <div class="w3-container"></div>
+                </div>
 
-                    <p class="w3-large"><b><i class="fa fa-cogs fa-fw w3-text-indigo"></i>ความสามารถ</b></p>
-                    <p>ตัดต่อภาพ | Photoshop CC, Illustrator CC</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:90%">90%</div>
-                    </div>
-                    <p>ตัดต่อวิดีโอ | Vegas Pro 15, Final Cut Pro</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:70%">70%</div>
-                    </div>
-                    <p>จัดการเอกสาร | MS Word, Pages</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:65%">65%</div>
-                    </div>
-                    <p>ออกแบบเกม | Unity 5</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:65%">65%</div>
-                    </div>
-                    <p>เขียนโปรแกรมเชิงวัตถุ | C#, JAVA (Visual Studio)</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:65%">65%</div>
-                    </div>
-                    <p>ออกแบบเว็บไซต์​ | HTML5, CSS3, JavaScript (Visual Studio)</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:60%">60%</div>
-                    </div>
-                    <p>สื่อออนไลน์ | Facebook, Instagram, Youtube</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:50%">50%</div>
-                    </div>
-                    <p>ออกแบบโมเดล 3D​ | Blender</p>
-                    <div class="w3-white w3-round-xlarge w3-small">
-                        <div class="w3-container w3-center w3-round-xlarge w3-indigo" style="width:25%">25%</div>
+                <!-- Abilities -->
+                <div id="profile-abilities" class="innercontent" style="display:none;padding-bottom:16px">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-address-card w3-xxlarge w3-text-indigo"></i><b>ความสามารถ</b></h2>
+
+                    <div class="sub-heading-text">ภาษา</div>
+
+                    <li>ไทย (ภาษาพื้นถิ่น)</li>
+                    <div class="half-grid">
+                        <div class="bar-left">
+                            <div style="width:100%;">การฟัง</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:100%;">การอ่าน</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:100%;">การพูด</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:85%;">การเขียน</div>
+                        </div>
                     </div>
 
-                    <div class="w3-half">
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Visual Studio</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>C, C++</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Windows XP, 7, 8, 8.1, 10</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>บาสเกตบอล</p>
-                    </div>
-                    <div class="w3-half">
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>PowerPoint</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Arduino</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>MacOS X</p>
-                        <p><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>แบดมินตัน</p>
+                    <li>อังกฤษ</li>
+                    <div class="half-grid">
+                        <div class="bar-left">
+                            <div style="width:70%;">การฟัง</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:60%;">การอ่าน</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:50%;">การพูด</div>
+                        </div>
+                        <div class="bar-left">
+                            <div style="width:80%;">การเขียน</div>
+                        </div>
                     </div>
 
-                    <p class="w3-large w3-text-theme"><b><i class="fa fa-language fa-fw w3-text-indigo"></i>ภาษา</b></p>
-                    <p>ไทย</p>
-                    <div class="w3-half" style="padding-right:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:100%;text-align:left;">การฟัง</div>
+                    <li>ฝรั่งเศส</li>
+                    <div class="half-grid">
+                        <div class="bar-left">
+                            <div style="width:30%;">การฟัง</div>
                         </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:100%;text-align:left;">การอ่าน</div>
+                        <div class="bar-left">
+                            <div style="width:40%;">การอ่าน</div>
                         </div>
-                    </div>
-                    <div class="w3-half" style="padding-left:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:100%;text-align:left;">การพูด</div>
+                        <div class="bar-left">
+                            <div style="width:30%;">การพูด</div>
                         </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:85%;text-align:left;">การเขียน</div>
+                        <div class="bar-left">
+                            <div style="width:70%;">การเขียน</div>
                         </div>
                     </div>
-                    <p>อังกฤษ</p>
-                    <div class="w3-half" style="padding-right:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:70%;text-align:left;">การฟัง</div>
+
+                    <div class="sub-heading-text">กีฬา</div>
+                    <div class="half-grid content-border">
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>บาสเกตบอล</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>แบดมินตัน</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>ว่ายน้ำ</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>ปั่นจักรยาน</li>
+                    </div>
+
+                    <div class="sub-heading-text">เฉพาะทาง</div>
+
+                    
+                    <div class="half-grid content-border">
+                        <div>
+                            <li>ตัดต่อภาพ | Photoshop CC, Affinity Photo</li>
+                            <div class="bar-left">
+                                <div style="width:90%">90%</div>
+                            </div>
                         </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:60%;text-align:left;">การอ่าน</div>
+                        <div>
+                            <li>เขียนโปรแกรม | Visual Studio Community/Code</li>
+                            <div class="bar-left">
+                                <div style="width:90%">90%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <li>ตัดต่อวิดีโอ | Vegas Pro 15, Final Cut Pro</li>
+                            <div class="bar-left">
+                                <div style="width:70%">70%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <li>จัดการเอกสาร | Microsoft Word, Pages</li>
+                            <div class="bar-left">
+                                <div style="width:65%">65%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <li>ออกแบบเกม | Unity 5</li>
+                            <div class="bar-left">
+                                <div style="width:65%">65%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <li>สื่อออนไลน์ | Facebook, Instagram, Youtube</li>
+                            <div class="bar-left">
+                                <div style="width:50%">50%</div>
+                            </div>
+                        </div>
+                        <div>
+                            <li>ออกแบบโมเดล 3D​ | Blender</li>
+                            <div class="bar-left">
+                                <div style="width:25%">25%</div>
+                            </div>
                         </div>
                     </div>
-                    <div class="w3-half" style="padding-left:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:50%;text-align:left;">การพูด</div>
-                        </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:80%;text-align:left;">การเขียน</div>
-                        </div>
+
+                    <div class="sub-heading-text">เทคโนโลยี/แอพพลิเคชั่น</div>
+
+                    <div class="half-grid content-border">
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Visual Studio Community/Code</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>MacOS X</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Windows XP, 7, 8, 8.1 and 10</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>PowerPoint</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Arduino</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>HTML</li>
                     </div>
-                    <p>ฝรั่งเศส</p>
-                    <div class="w3-half" style="padding-right:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:30%;text-align:left;">การฟัง</div>
-                        </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:40%;text-align:left;">การอ่าน</div>
-                        </div>
-                    </div>
-                    <div class="w3-half" style="padding-left:8px">
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:30%;text-align:left;">การพูด</div>
-                        </div>
-                        <div class="w3-white w3-round-xlarge w3-small" style="margin-bottom:8px;">
-                            <div class="w3-container w3-round-xlarge w3-indigo" style="width:70%;text-align:left;">การเขียน</div>
-                        </div>
+
+                    <div class="sub-heading-text">ภาษาคอมพิวเตอร์</div>
+                    <div class="half-grid content-border">
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>C/C++</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>C#</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>Python</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>CSS</li>
+                        <li><i class="fas fa-check-circle fa-fw w3-text-indigo"></i>JavaScript</li>
                     </div>
                 </div>
 
@@ -232,14 +281,14 @@
                         <h5 class="w3-opacity"><b>ระดับชั้นประถมศึกษา</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i>โรงเรียนพงษ์พิกุลเชียงใหม่ <font size="1px">216 ซอยฟ้ามุ่ย ถนนสันทราย-พร้าว ต.สันทรายหลวง อ.สันทราย จ.เชียงใหม่ 50210</font></h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>พฤษาภาคม 2550 - มีนาคม 2556</h6>
-                        <p>ผลการเรียนเฉลี่ย 12 ภาคการศึกษา: 3.57</p>
+                        <li>ผลการเรียนเฉลี่ย 12 ภาคการศึกษา: 3.57</li>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>ระดับชั้นมัธยมศึกษาตอนต้น</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i><a href="https://www.thepbodint.ac.th/" target="_blank">โรงเรียนเทพบดินทร์วิทยาเชียงใหม่ </a><font size="1px">6/1 ถนนสนามกีฬา ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>20 พฤษาภาคม 2556 - 25 มีนาคม 2559</h6>
-                        <p>ผลการเรียนเฉลี่ย 6 ภาคการศึกษา: 3.47</p>
+                        <li>ผลการเรียนเฉลี่ย 6 ภาคการศึกษา: 3.47</li>
                         <div class="w3-center">
                             <img src="image/certification/a_grade7th.jpeg"/>
                         </div>
@@ -250,7 +299,7 @@
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i><a href="http://www.yupparaj.ac.th/yrc/" target="_blank">โรงเรียนยุพราชวิทยาลัย </a><font size="1px">238 ถนนพระปกเกล้า ต.ศรีภูมิ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
                         <h6 class="w3-text-indigo"><i class="fab fa-wpexplorer fa-fw"></i>โครงการพัฒนาและส่งเสริมผู้มีความสามารถพิเศษทางวิทยาศาสตร์และเทคโนโลยีภาคสมทบ (พสวท.สมทบ)</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>10 พฤษาภาคม 2559 - 29 มีนาคม 2562</h6>
-                        <p>ผลการเรียนเฉลี่ย 6 ภาคการศึกษา: 3.03</p>
+                        <li>ผลการเรียนเฉลี่ย 6 ภาคการศึกษา: 3.03</li>
                         <div class="w3-center">
                             <img src="image/certification/a_highschool.jpeg"/>
                         </div>
@@ -261,7 +310,7 @@
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i><a href="http://www.yupparaj.ac.th/yrc/" target="_blank">มหาวิทยาลัยเชียงใหม่ </a><font size="1px">239 ถนนห้วยแก้ว ต.สุเทพ อ.เมือง จ.เชียงใหม่ 50200</font></h6>
                         <h6 class="w3-text-indigo"><i class="fab fa-wpexplorer fa-fw"></i>คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมคอมพิวเตอร์</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>5 สิงหาคม 2562 - <span class="w3-tag w3-indigo w3-round">ปัจจุบัน</span></h6>
-                        <p>ผลการเรียนเฉลี่ย N/A ภาคการศึกษา: N/A</p>
+                        <li>ผลการเรียนเฉลี่ย 1 ภาคการศึกษา: 3.05</li>
                     </div>
                 </div>
 
@@ -309,7 +358,7 @@
                         <h5 class="w3-opacity"><b>โครงการค่ายยุวชนคอมพิวเตอร์ครั้งที่ 16 ComCamp16th</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i>คณะวิทยาศาสตร์ ภาควิชาวิทยาการคอมพิวเตอร์ มหาวิทยาลัยแม่โจ้</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>24-27 มกราคม 2561</h6>
-                        <p>ได้เข้ารับการอบรมการเขียนภาษา C เบื้องต้น และการเขียนโปรแกรมคำสั่งประยุกต์ใช้กับ Arduino และยังได้เข้าร่วมการประกวดสร้างอุปกรณ์เตื่อนภัยจากชิ้นส่วน Arduino</p>
+                        <li>ได้เข้ารับการอบรมการเขียนภาษา C เบื้องต้น และการเขียนโปรแกรมคำสั่งประยุกต์ใช้กับ Arduino และยังได้เข้าร่วมการประกวดสร้างอุปกรณ์เตื่อนภัยจากชิ้นส่วน Arduino</li>
                         <div class="w3-center w3-twothird">
                             <img src="image/comcamp16th/_MG_4992.jpg"/>
                             <img src="image/comcamp16th/_MG_4995.jpg"/>
@@ -343,7 +392,7 @@
                         <h5 class="w3-opacity"><b>โครงการการแข่งขันประดิษฐ์(หุ่นยนต์) DIY Robot Project ครั้งที่ 1</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i>คณะวิศวกรรมศาสตร์ ภาควิชาวิศวกรรมเครื่องกล มหาวิทยาลัยเชียงใหม่</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>21-29 พฤษาภาคม 2561</h6>
-                        <p>ได้เข้ารับการอบรมการเขียนโปรแกรมคำสั่งประยุกต์ใช้กับ Arduino เพื่อใช้ในการสร้างหุ่นยนต์ Arduino ที่ต้องนำมาบังคับเพื่อแก้โจทย์และอุปสรรคในการแข่งขัน</p>
+                        <li>ได้เข้ารับการอบรมการเขียนโปรแกรมคำสั่งประยุกต์ใช้กับ Arduino เพื่อใช้ในการสร้างหุ่นยนต์ Arduino ที่ต้องนำมาบังคับเพื่อแก้โจทย์และอุปสรรคในการแข่งขัน</li>
                         <div class="w3-center w3-twothird">
                             <img src="image/robotDIY/1.jpg"/>
                             <img src="image/robotDIY/2.jpg"/>
@@ -421,7 +470,7 @@
                         <h5 class="w3-opacity"><b>การศึกษาภาษาคอมพิวเตอร์ด้วยตัวเองจากโปรแกรม SoloLearn</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-university fa-fw"></i>SoloLearn</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-calendar fa-fw"></i>มกราคม 2559 - <span class="w3-tag w3-indigo w3-round">ปัจจุบัน</span></h6>
-                        <p>ได้เรียนรู้ภาษา C#, Java, HTML, CSS, JavaScript และ jQuery เพื่อนำมาต่อยอดและพัฒนาในด้านคอมพิวเตอร์ต่อไป</p>
+                        <li>ได้เรียนรู้ภาษา C#, Java, HTML, CSS, JavaScript และ jQuery เพื่อนำมาต่อยอดและพัฒนาในด้านคอมพิวเตอร์ต่อไป</li>
                         <div class="w3-center">
                             <img src="image/sololearn/CSharp_certificate.jpg"/>
                             <img src="image/sololearn/HTML_certificate.jpg"/>
@@ -447,7 +496,7 @@
                             <img src="image/synonymball/synonymball2.jpg"/>
                             <img src="image/synonymball/synonymball3.jpg"/>
                         </div>
-                        <p>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ Synonym Ball เป็นเกมเพื่อการศึกษาและให้ความเพลิดเพลิน สามารถเล่นได้ฟรีในเว็บไซต์ BitDeveloper ออกแบบและสร้างโดยนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ ร่วมกับนายการิน บุญยืน โดยใช้โปรแกรม Unity3d เป็นเครื่องมือในการออกแบบเกม</p>
+                        <li>เกมพัฒนาทักษะด้านคำศัพท์ภาษาอังกฤษ Synonym Ball เป็นเกมเพื่อการศึกษาและให้ความเพลิดเพลิน สามารถเล่นได้ฟรีในเว็บไซต์ BitDeveloper ออกแบบและสร้างโดยนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ ร่วมกับนายการิน บุญยืน โดยใช้โปรแกรม Unity3d เป็นเครื่องมือในการออกแบบเกม</li>
                         <a href="https://kemaoaods.github.io/main/project/project2.html" target="_blank"><u>สามารถเล่นเกมได้ที่นี้</u></a>
                         <hr>
                     </div>
@@ -504,7 +553,7 @@
                             <img src="image/model3d_CHAI/4.png"/>
                             <img src="image/model3d_CHAI/5.png"/>
                         </div>
-                        <p>โมเดลนี้ถูกนำไปใช้เป็นส่วนหนึ่งของโครงงานการจัดวางหลอดไฟภายในโรงเรือนเลี้ยงไก่ขนาดเล็กแบบหน้าจั่วเพื่อให้แสงสว่างที่เพียงพอต่อการเลี้ยงไก่ไข่และให้เกิดความคุ้มค่ามากที่สุดต่อการเลี้ยงไก่หนึ่งรอบ</p>
+                        <li>โมเดลนี้ถูกนำไปใช้เป็นส่วนหนึ่งของโครงงานการจัดวางหลอดไฟภายในโรงเรือนเลี้ยงไก่ขนาดเล็กแบบหน้าจั่วเพื่อให้แสงสว่างที่เพียงพอต่อการเลี้ยงไก่ไข่และให้เกิดความคุ้มค่ามากที่สุดต่อการเลี้ยงไก่หนึ่งรอบ</li>
                         <hr>
                     </div>
                     <div class="w3-container">
@@ -514,19 +563,19 @@
                         <div class="w3-center">
                             <img src="image/Portfolio/DR.PLAGUE.jpeg"/>
                         </div>
-                        <p>ใช้เทคนิกการวาดภาพด้วยจุด</p>
+                        <li>ใช้เทคนิกการวาดภาพด้วยจุด</li>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>เว็บไซต์ KhemDev</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-wrench fa-fw"></i>นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</h6>
-                        <p>เว็บไซต์สะสมผลงานของนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ (ข้าพเจ้า) ออกแบบและสร้างโดยนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ (ข้าพเจ้า)</p>
+                        <li>เว็บไซต์สะสมผลงานของนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ (ข้าพเจ้า) ออกแบบและสร้างโดยนายอภิสิทธิ์ ฤทธิ์เรืองโรจน์ (ข้าพเจ้า)</li>
                         <hr>
                     </div>
                     <div class="w3-container">
                         <h5 class="w3-opacity"><b>เกม Sovereinty: States (อยู่ในช่วงการพัฒนา ยังไม่สามารถเล่นได้)</b></h5>
                         <h6 class="w3-text-indigo"><i class="fa fa-wrench fa-fw"></i>นายอภิสิทธิ์ ฤทธิ์เรืองโรจน์</h6>
-                        <p>เกมจำลองการเมืองการปกครอง สมุมติให้เราเป็นผู้บริหารประเทศ เราต้องดูแลประชาชนของเราให้มีความพอใจสูงสุด รวมถึงการบริหารด้านเศรษฐกิจกับนานาประเทศ ด้านการเงิน ด้านการพัฒนาประเทศ ทุกอย่างอยู่ในกำมือเรา</p>
+                        <li>เกมจำลองการเมืองการปกครอง สมุมติให้เราเป็นผู้บริหารประเทศ เราต้องดูแลประชาชนของเราให้มีความพอใจสูงสุด รวมถึงการบริหารด้านเศรษฐกิจกับนานาประเทศ ด้านการเงิน ด้านการพัฒนาประเทศ ทุกอย่างอยู่ในกำมือเรา</li>
                         <a href="https://kemaoaods.github.io/sovereigntystates/" target="_blank"><u>สามารถรับชมเกมได้ที่นี้</u></a>
                     </div>
                 </div>
@@ -679,6 +728,7 @@
                         <h6 class="w3-text-indigo"><i class="fa fa-plus fa-fw"></i>มือถือ : Samsung Galaxy A7 - 2017</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-plus fa-fw"></i>มือถือ : Google Pixel 32GB (black) - 2018</h6>
                         <h6 class="w3-text-indigo"><i class="fa fa-plus fa-fw"></i>โน๊คบุ๊ค : Macbook Pro Retina 15" 2014 - 2018</h6>
+                        <h6 class="w3-text-indigo"><i class="fa fa-plus fa-fw"></i>โน๊คบุ๊ค : Macbook Pro Four-Thunderbolt Ports 13" 2018 - 2019</h6>
                     </div>
                 </div>
                 <!-- End Right Column -->
@@ -687,12 +737,11 @@
         </div>
         <!-- End Page Container -->
         <div style="height:114px;"></div>
-    </div>
+    </main>
 
     <div layout="layout/navbar.html"></div>
     <div layout="layout/footer.html"></div>
 
     <script src="js/homemain.js"></script>
-    <script src="js/access.js"></script>
 </body>
 </html>

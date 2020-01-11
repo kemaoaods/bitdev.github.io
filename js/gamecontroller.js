@@ -20,16 +20,15 @@ ID("navbarcontroller").addEventListener("click", function() {
 });
 
 function sharedLayout() {
-    for (var i = 0; i < TN("div").length; i++) {
-        var elmnt = TN("div")[i];
-        var file = elmnt.getAttribute("layout");
+    for (let each of TN("div")) {
+        let file = each.getAttribute("layout");
         if (file) {
-            var xhttp = new XMLHttpRequest();
+            let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-                    elmnt.removeAttribute("layout");
+                    if (this.status == 200) {each.innerHTML = this.responseText;}
+                    if (this.status == 404) {each.innerHTML = "Page not found.";}
+                    each.removeAttribute("layout");
                     sharedLayout();
                 }
             }      

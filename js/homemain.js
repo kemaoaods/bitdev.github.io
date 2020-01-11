@@ -2,24 +2,30 @@
 const CL = (cl) => document.getElementsByClassName(cl);
 const TN = (tn) => document.getElementsByTagName(tn);
 
+window.onerror = (msg, url, lineNo, columnNo, error) => alert(msg);
+
 // switching text on the home page
-var a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
-if (ID("role") != null) AnimatedText(a, 4000, 20, true);
+let a = ["SOFTWARE DEVELOPER","PROGRAMMER","GAME DEVELOPER","GRAPHIC DESIGNER","VIDEO EDITOR","PHOTOSHOPPER","WEB DEVELOPER","WEB DESIGNER","3D MODELER","CODER"];
+if (ID("role"))
+    AnimatedText(a, 4000, 20, true);
 
 function AnimatedText(texts, changeInterval, updateInterval, onTextChanged) {
-    var currentText = parseInt(Math.random() * texts.length);
-    var areaText = texts[0];
+    let currentText = parseInt(Math.random() * texts.length);
+    let areaText = texts[0];
 
     this.t1 = setInterval(function() {
-        var c = parseInt(Math.random() * Math.max(texts[currentText].length, areaText.length));
-        var s = texts[currentText][c];
+        let c = parseInt(Math.random() * Math.max(texts[currentText].length, areaText.length));
+        let s = texts[currentText][c];
+
         if (typeof s == 'undefined') s = " ";
         while (areaText.length < c) areaText += " ";
-        var newText = (areaText.slice(0, c) + s + areaText.slice(c + 1)).trim();
-        var diff = !(newText == areaText);
+
+        let newText = (areaText.slice(0, c) + s + areaText.slice(c + 1)).trim();
+        let diff = !(newText == areaText);
         areaText = newText;
+
         if (onTextChanged && diff) onTextChanged = true;
-        document.getElementById("role").textContent = areaText.length == 0 ? "&nbsp;" : areaText;
+        ID("role").textContent = areaText.length == 0 ? "&nbsp;" : areaText;
     }.bind(this), updateInterval ? updateInterval : 50);
 
     this.t2 = setInterval(function() {
@@ -35,9 +41,9 @@ AnimatedText.prototype = {
 }
 
 // navbar function scrolling down to hide else to show
-/* var prevScrollpos = window.pageYOffset;
+/* let prevScrollpos = window.pageYOffset;
 window.onscroll = function ScrollingBar() {
-    var currentScrollPos = window.pageYOffset;
+    let currentScrollPos = window.pageYOffset;
     if (prevScrollpos > currentScrollPos) {
         ID("navbar").style.top = "0";
     } else {
@@ -52,11 +58,11 @@ window.onscroll = function ScrollingBar() {
 
 //Searching for projects page.
 function SearchingPorj() {
-    var input, list, count;
+    let input, list, count;
     input = ID("search");
     list = ID("document").getElementsByTagName("h6");
     count = list.length;
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if (list[i].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
             list[i].parentElement.style.display = "block";
         } else {
@@ -71,11 +77,11 @@ function SearchingPorj() {
 
 //Searching for application page.
 function SearchingApp() {
-    var input, list, count;
+    let input, list, count;
     input = ID("search");
     list = ID("document").getElementsByClassName("item");
     count = list.length;
-    for (var i = 0; i < list.length; i++) {
+    for (let i = 0; i < list.length; i++) {
         if (list[i].children[0].innerHTML.toUpperCase().indexOf(input.value.toUpperCase()) > -1) {
             list[i].children[0].parentElement.style.display = "block";
         } else {
@@ -89,9 +95,9 @@ function SearchingApp() {
 }
 
 // showing bigger photo when clicking on the photo target.
-for (var i = 0; i < CL("photoplace").length; i++) {
-    for (var j = 0; j < CL("photoplace")[i].getElementsByTagName("img").length; j++) {
-        CL("photoplace")[i].getElementsByTagName("img")[j].addEventListener("click", function(){
+for (const each of CL("photoplace")) {
+    for (const img of each.getElementsByTagName("img")) {
+        img.addEventListener("click", function(){
             ID("focusimg").src = this.src;
             ID("photomodal").style.display = "block";
             //ID("caption").innerHTML = element.alt;
@@ -101,20 +107,24 @@ for (var i = 0; i < CL("photoplace").length; i++) {
 
 // close clicked photo when clicked outside the photo (photomodal)
 window.onclick = function(event) {
-    if (event.target == photomodal) photomodal.style.display = "none";
+    if (event.target == photomodal)
+        photomodal.style.display = "none";
 }
 
 // connent page layout for reducing html code
 function sharedLayout() {
-    for (var i = 0; i < TN("div").length; i++) {
-        var elmnt = TN("div")[i];
-        var file = elmnt.getAttribute("layout");
+    for (let i = 0; i < TN("div").length; i++) {
+        let elmnt = TN("div")[i];
+        let file = elmnt.getAttribute("layout");
         if (file) {
-            var xhttp = new XMLHttpRequest();
+            let xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
-                    if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-                    if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+                    switch (this.status) {
+                        case 200: this.responseText; break;
+                        case 404: elmnt.innerHTML = "Page not found."; break;
+                    }
+                    
                     elmnt.removeAttribute("layout");
                     sharedLayout();
                 }
@@ -128,25 +138,34 @@ function sharedLayout() {
 sharedLayout();
 
 // PROFILE : fliping the e-book (not completed)
+function DynamicAge() {
+    let d = new Date();
+    if (ID("dynamic-age"))
+        ID("dynamic-age").textContent = (d.getFullYear() - ((d.getMonth() == 8 && d.getDate() == 10) ? 2000 : 2001)) + " ปี";
+}
+DynamicAge();
+
 function flipbook(flip) {
-    if ((ID("flipbookpage").textContent == 1 && flip == -1) || (ID("flipbookpage").textContent == 12 && flip == 1)) flip = 0;
+    if ((ID("flipbookpage").textContent == 1 && flip == -1) || (ID("flipbookpage").textContent == 12 && flip == 1))
+        flip = 0;
+    
     ID("flipbook").src = "image/Magazine-NE/p" + (Number(ID("flipbookpage").textContent) + flip) + ".jpg";
     ID("flipbookpage").textContent = Number(ID("flipbookpage").textContent) + flip;
 }
 
 // PROFILE : BOOK
-if (ID("portfolio") != null) {
-    for (var i = 0; i < ID("portfolio").childElementCount; i++) {
+if (ID("portfolio")) {
+    for (let i = 0; i < ID("portfolio").childElementCount; i++) {
         (function(index){
-            ID("portheadingbuttons").children[i].addEventListener("click", function(){
-                for (var j = 0; j < ID("portfolio").childElementCount; j++) {
+            ID("profile-headings").children[i].addEventListener("click", function(){
+                for (let j = 0; j < ID("portfolio").childElementCount; j++) {
                     if (index == j) {
                         ID("portfolio").children[j].style.display = "block";
-                        ID("portheadingbuttons").children[j].classList.add("clicked");
+                        ID("profile-headings").children[j].classList.add("selected-profile-heading");
                     }
                     else {
                         ID("portfolio").children[j].style.display = "none";
-                        ID("portheadingbuttons").children[j].classList.remove("clicked");
+                        ID("profile-headings").children[j].classList.remove("selected-profile-heading");
                     }
                 }
             });
