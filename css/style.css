@@ -1,17 +1,13 @@
 ﻿html, body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Sarabun', sans-serif;
+    font-family: 'Kodchasan', sans-serif;
+}
+
+html, body {
+    background-color: #1C212A;
 }
 
 a {
     text-decoration: none
-}
-
-* :not(input) {
-    user-select: none; /* supported by Chrome and Opera */
-   -webkit-user-select: none; /* Safari */
-   -khtml-user-select: none; /* Konqueror HTML */
-   -moz-user-select: none; /* Firefox */
-   -ms-user-select: none; /* Internet Explorer/Edge */
 }
 
 li {
@@ -31,24 +27,10 @@ input:focus, button:focus {
     outline: none;
 }
 
-/* Normal Contents */
-/* //----------------------------------------------------------------------------------------------------------------------------// */
+/* ### */
+
 header {
     text-align: center;
-}
-
-#head-text {
-    font-weight: bold;
-    font-size: 48px;
-    background: linear-gradient(to right, #3AFFAE, #3AD5FF , #4054b2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-#head-text-frame {
-    border-radius: 6px;
-    background-color: rgba(0,0,0,0.4);
-    color: white;
 }
 
 html, body { 
@@ -56,11 +38,7 @@ html, body {
 }
 
 footer {
-    clear: both;
-    position: relative;
-    background-color: #333;
     color: white;
-    margin-top: -114px;
 
     padding: 24px;
     text-align: center;
@@ -91,48 +69,26 @@ footer i:hover,
     padding-top: 40px;
 }
 
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-#navbar {
-    background-color: #333;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: block;
-    transition: top 0.3s;
-    z-index: 99;
+/* ### */
+
+#header-profile-pic-grid {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    height: 340px;
 }
 
-#navbar .text {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: 0.3s;
-    border-bottom-color: #4054b2;
+#profile-bg-image {
+    background-image: url("../image/profile-bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
-#navbar .logo {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: 0.3s;
-}
-
-#navbar .text:hover {
-    color: #BEBEBE;
-    padding-bottom: 10px;
-    border-bottom: 5px solid #4054b2;
-}
-
-#navbar .logo:hover {
-    transform: scale(1.75);
+#profile-nav-header {
+    padding: 24px 18px;
+    background-color: #2D3546;
+    border-radius: 6px;
+    color: white;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
@@ -241,7 +197,8 @@ footer i:hover,
 
 .innercontent {
     overflow: auto;
-    background-color: #EAEDED;
+    background-color: #2D3546;
+    color: white;
     border-radius: 4px;
     margin: 12px 0;
     padding: 6px 16px;
@@ -321,7 +278,6 @@ footer i:hover,
     display: grid;
     grid-gap: 24px;
     grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
-    grid-template-rows: repeat(auto-fit, auto);
 }
 
 #social-grid img {
@@ -364,7 +320,7 @@ input[id=search]:focus {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .resp-container iframe {
@@ -379,9 +335,9 @@ input[id=search]:focus {
 #youtube-grid {
     margin-top: 8px;
     display: grid;
-    grid-gap: 8px;
-    grid-template-columns: repeat(auto-fit, minmax(28%, 1fr));
-    grid-template-rows: repeat(auto-fit, auto);
+    grid-gap: 16px;
+    grid-template-columns: 65% 35%;
+    align-items: center;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
