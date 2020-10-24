@@ -1,5 +1,5 @@
 ﻿html, body, h1, h2, h3, h4, h5, h6 {
-    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 html, body {
@@ -18,9 +18,39 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #BEBEBE;
-    margin: 0px;
-    padding: 0; 
+    border-top: 1px dashed #BEBEBE;
+    margin: 8px 0;
+}
+
+html {
+	box-sizing: border-box;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:not(textarea),
+*:not([contenteditable=true]),
+*:not(input) {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	border-style: none;
+
+	-webkit-user-drag: none;
+	-khtml-user-drag: none;
+	-moz-user-drag: none;
+	-o-user-drag: none;
 }
 
 input:focus, button:focus {
@@ -40,7 +70,7 @@ html, body {
 footer {
     color: white;
 
-    padding: 24px;
+    padding: 16px;
     text-align: center;
 }
 
@@ -86,36 +116,24 @@ footer i:hover,
 
 #profile-nav-header {
     padding: 24px 18px;
-    background-color: #2D3546;
     border-radius: 6px;
     color: white;
 }
 
-/* //----------------------------------------------------------------------------------------------------------------------------// */
+#profile-nav-header li {
+    font-size: larger;
+}
+
+#profile-nav-header > div:last-child {
+    margin-top: 24px;
+}
+
+/* ### */
+
 .fixedscale {
     margin: 0 auto;
     max-width: 1100px;
     padding: 0 10px;
-}
-
-.blackandwhite {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    transition: 0.3s;  
-}
-
-.blackandwhite:hover {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%);
-}
-
-.parallax {
-    background-image: url("../image/memain.jpg");
-    height: 400px;
-    width: auto;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
@@ -198,39 +216,11 @@ footer i:hover,
 .innercontent {
     overflow: auto;
     background-color: #2D3546;
+    border: 2px solid #475061;
     color: white;
-    border-radius: 4px;
+    border-radius: 8px;
     margin: 12px 0;
     padding: 6px 16px;
-}
-
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-
-.tooltiptext {
-    visibility: hidden;
-    width: 180px;
-    background-color: rgba(0,0,0,0.4);
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    opacity: 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -90px;
-    -webkit-transition: opacity 0.3s ease-in-out; /* define transitions */
-    transition: opacity 0.3s ease-in-out;
-}
-
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
@@ -290,37 +280,11 @@ footer i:hover,
     opacity: 0.6;
 }
 
-/* Search Bar */
-/* //----------------------------------------------------------------------------------------------------------------------------// */
-input[id=search] {
-    width: 100%;
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 40px;
-    font-size: 16px;
-    background-color: white;
-    background-image: url('../image/searchicon.png');
-    background-size: 28px 28px;
-    background-position: 10px 10px;
-    background-repeat: no-repeat;
-    padding: 12px 20px 12px 45px;
-    -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out;
-    transition: 0.4s;
-}
-
-input[id=search]:focus {
-    width: 100%;
-    box-shadow: 0px 0px 4px 2px #AED6F1;
-    border: 2px solid #A9CCE3;
-}
-
 /* //----------------------------------------------------------------------------------------------------------------------------// */
 .resp-container {
     position: relative;
     overflow: hidden;
     padding-top: 56.25%;
-    border-radius: 6px;
 }
 
 .resp-container iframe {
@@ -329,55 +293,49 @@ input[id=search]:focus {
     left: 0;
     width: 100%;
     height: 100%;
-    border: 0px solid black;
+    border: 1px dashed #fff;
 }
 
 #youtube-grid {
     margin-top: 8px;
     display: grid;
     grid-gap: 16px;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
 /* //----------------------------------------------------------------------------------------------------------------------------// */
-#content_showcase {
+#content-showcase {
     display: grid;
-    grid-gap: 8px;
+    gap: 12px;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    grid-template-rows: repeat(auto-fit, auto);
 }
 
-#content_showcase > .item {
-    max-width: 200px;
-    background-color: white;
+#content-showcase > .item {
+    background-color: #475061;
+    border: 1px dashed #fff;
     padding: 6px 12px;
     border-radius: 6px;
-    border: 1px solid #ccc;
     cursor: pointer;
     transition: 0.3s;
 }
 
-#content_showcase > .item > li {
+#content-showcase > .item > li {
     height: 1em;
     transition: 0.3s
 }
 
-#content_showcase > .item > small {
+#content-showcase > .item > small {
     font-weight: 200;
-    color: grey;
+    color: #CBCBCB;
     transition: 0.3s
 }
 
-#content_showcase > .item:hover img, 
-#content_showcase > .item:hover > li,
-#content_showcase > .item:hover > small{
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-    opacity: 0.1;
+#content-showcase > .item:hover {
+    border: 1px solid #fff;
 }
 
-#content_showcase img {
+#content-showcase img {
     width: 100%;
     margin: 12px 0;
     vertical-align: middle;

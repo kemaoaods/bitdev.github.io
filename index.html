@@ -1,18 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>KhemDev - Apisit Ritreungroj's Main Website</title>
+    <title>KhemDev | Apisit Ritreungroj's Main Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kodchasan&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/x-icon" href="image/mylogo1.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./image/logo.png"/>
 </head>
 <body>
     <!-- Photo Modal zoom photo showcase -->
-    <div id="photomodal" class="w3-center" onclick="close(this)" style="display:none;">
+    <div id="photomodal" class="w3-center" onclick="close(this)" hidden>
         <img id="focusimg" class="animate" src=""/>
     </div>
 
@@ -25,26 +25,31 @@
             <aside id="profile-nav-header">
                 <div id="social-grid">
                     <a href="https://www.facebook.com/apisit.khem" target="_blank">
-                        <img src="https://image.flaticon.com/icons/svg/124/124010.svg">
+                        <img src="./image/icons/facebook.png">
                     </a>
                     <a href="https://www.instagram.com/apskhem" target="_blank">
-                        <img src="https://image.flaticon.com/icons/svg/124/124032.svg">
+                        <img src="./image/icons/instagram.png">
                     </a>
                     <a href="https://www.youtube.com/CyberRecordChannel" target="_blank">
-                        <img src="https://image.flaticon.com/icons/svg/124/124015.svg">
+                        <img src="./image/icons/youtube.png">
                     </a>
-                    <a href="http://line.me/ti/p/~khemzakung" target="_blank">
-                        <img src="https://image.flaticon.com/icons/svg/124/124027.svg">
+                    <a href="https://github.com/apskhem" target="_blank">
+                        <img src="./image/icons/github.png">
                     </a>
-                    <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank">
-                        <img src="https://image.flaticon.com/icons/svg/124/124013.svg">
+                    <a href="https://www.pinterest.com/apisit_lon/" target="_blank">
+                        <img src="./image/icons/pinterest.png">
                     </a>
                 </div>
-                <div style="margin-top:8px;">
-                    <li>Overview</li>
+                <div>
+                    <hr>
+                    <li>Introduction</li>
                     <li>Youtube</li>
                     <li>Artworks</li>
                     <li>Projects</li>
+                    <hr>
+                    <b>Contact</b>
+                    <li>cyber1.record@gmail.com</li>
+                    <li>apisit_lon@hotmail.com</li>
                 </div>
             </aside>
         </div>
@@ -57,34 +62,29 @@
                 I'm interesting in photoshopping, video editing, 3D modeling, and web development programming and design.
             </p>
             <p>
-                Hence this is my personal website for showing my collections of work. All contents in the website are belong to me and they all
-                are reserved by my authority. If you are interested in pieces of my work you can visit the my original uploads.
+                Hence this is my personal website for showing my collection of works. All contents in the website are belonged to me, and they all
+                are reserved by my authority. If you are interested in my work you can visit my original uploads.
             </p>
-            <p>You can see more information about me in the <a href="profile_th.html">profile</a> page.</p>
+            <p>You can see more information about me in the <a href="profile.html">PUBLIC PROFILE</a> page.</p>
         </div>
 
         <!-- Youtube -->
         <div class="innercontent">
             <h4 class="bold"><a href="http://goo.gl/t5uCOM" class="headlink" target="_blank">Youtube</a> Channel</h4>
-            <img src="image/bitdevyoutube.png" alt="youtube" class="w3-round" style="width: 100%"/>
 
             <div id="youtube-grid">
-                <aside>
-                    <div class="resp-container" style="margin-top:12px;">
-                        <iframe src="https://www.youtube.com/embed/hN2LY6nQLTU" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </aside>
-                <aside>
-                    <div class="resp-container">
-                        <iframe src="https://www.youtube.com/embed/cUHZRz1_Hrw" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                    </div>
-                    <div class="resp-container">
-                        <iframe src="https://www.youtube.com/embed/FUg4dJiyvOU" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                    </div>
-                    <div class="resp-container">
-                        <iframe src="https://www.youtube.com/embed/xiOoL6BptZ8" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-                    </div>
-                </aside>
+                <div class="resp-container">
+                    <iframe src="https://www.youtube.com/embed/hN2LY6nQLTU" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="resp-container">
+                    <iframe src="https://www.youtube.com/embed/cUHZRz1_Hrw" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="resp-container">
+                    <iframe src="https://www.youtube.com/embed/FUg4dJiyvOU" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="resp-container">
+                    <iframe src="https://www.youtube.com/embed/xiOoL6BptZ8" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
             </div>
         </div>
 
@@ -105,38 +105,66 @@
         </div>
 
         <div id="document" class="innercontent">
-            <h4><b>Applications</b></h4>
-            <input type="text" placeholder="Search document..." id="search" onkeyup="SearchingApp()" style="margin-bottom:15px;">
-
-            <div id="content_showcase" style="padding-bottom:25px">
+            <h4><b>Projects and Applications</b></h4>
+            <div id="content-showcase" style="padding-bottom:25px">
                 <a class="item" href=" https://apskhem.github.io/unity3d-synonym-ball/" target="_blank">
                     <li>Synonym Ball</li>
                     <small>13 Sep, 2018</small>
-                    <img src="image/unavailablecontent.png">
+                    <img src="./image/image-placeholder.png">
                     <small>macOS, Web Browser</small>
                 </a>
                 <a class="item" href="https://apskhem.github.io/sovereigntystates/" target="_blank">
                     <li>Sovereignty: States</li>
                     <small>22 Sep, 2018 (Not Released)</small>
-                    <img src="image/unavailablecontent.png">
+                    <img src="./image/image-placeholder.png">
                     <small>Web Browser</small>
                 </a>
                 <a class="item" href="https://apskhem.github.io/examguessing/" target="_blank">
                     <li>Exam Guessing</li>
                     <small>24 Dec, 2018</small>
-                    <img src="image/unavailablecontent.png">
+                    <img src="./image/image-placeholder.png">
                     <small>Web Browser</small>
                 </a>
                 <a class="item" href="https://apskhem.github.io/developmath/" target="_blank">
                     <li>Developmath</li>
                     <small>6 Jan, 2019</small>
-                    <img src="image/unavailablecontent.png">
+                    <img src="./image/image-placeholder.png">
                     <small>Web Browser</small>
                 </a>
                 <a class="item" href="https://apskhem.github.io/bookassembly/" target="_blank">
                     <li>BookAssembly</li>
                     <small>1 Apr, 2019 (Not Released)</small>
-                    <img src="image/unavailablecontent.png">
+                    <img src="./image/image-placeholder.png">
+                    <small>Web Browser</small>
+                </a>
+                <a class="item" href="https://github.com/apskhem/libgdx-era-of-battles" target="_blank">
+                    <li>Era of Battles</li>
+                    <small>1 Nov, 2020</small>
+                    <img src="./image/image-placeholder.png">
+                    <small>Java Environment</small>
+                </a>
+                <a class="item" href="https://github.com/apskhem/calcucom" target="_blank">
+                    <li>Calcucom</li>
+                    <small>1 Nov, 2019</small>
+                    <img src="./image/image-placeholder.png">
+                    <small>C++</small>
+                </a>
+                <a class="item" href="https://github.com/apskhem/unity5-references-for-vscode" target="_blank">
+                    <li>Unity VS Code snippet</li>
+                    <small>1 Nov, 2020</small>
+                    <img src="./image/image-placeholder.png">
+                    <small>VS Code</small>
+                </a>
+                <a class="item" href="https://github.com/apskhem/pathink" target="_blank">
+                    <li>PathInk</li>
+                    <small>-- ---, ---- (Not Released)</small>
+                    <img src="./image/image-placeholder.png">
+                    <small>Web Browser</small>
+                </a>
+                <a class="item" href="https://github.com/apskhem/frameslide" target="_blank">
+                    <li>FrameSlide</li>
+                    <small>-- ---, ---- (Not Released)</small>
+                    <img src="./image/image-placeholder.png">
                     <small>Web Browser</small>
                 </a>
             </div>
@@ -151,13 +179,7 @@
             <a href="https://www.pinterest.com/apisit_lon/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
             <a href="https://steamcommunity.com/profiles/76561198126589193/" target="_blank"><i class="fab fa-steam"></i></a>
             <a href="https://www.youtube.com/CyberRecordChannel" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="http://line.me/ti/p/~khemzakung" target="_blank"><i class="fab fa-line"></i></a>
-            <a href="https://plus.google.com/u/0/+CyberRecordChannel" target="_blank"><i class="fab fa-google-plus-g"></i></a>
-            <div class="tooltip">
-                <i class="fa fa-envelope"></i>
-                <span class="tooltiptext">cyber1.record@gmail.com
-                <br>apisit_lon@hotmail.com</span>
-            </div>
+            <a href="https://github.com/apskhem" target="_blank"><i class="fab fa-github"></i></a>
         </div>
         <div>&copy 2018-2020 apskhem.github.io All Rights Reserved.</div>
     </footer>
